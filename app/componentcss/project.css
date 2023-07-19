@@ -1,0 +1,35 @@
+.card-list {
+    position: relative;
+  }
+  
+  .line {
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .card {
+    width: 200px;
+    height: 80px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translateX(-50%);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  .card.left {
+    right: 50%;
+  }
+  
+  .card.right {
+    left: 50%;
+  }
