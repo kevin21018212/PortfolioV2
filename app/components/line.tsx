@@ -9,6 +9,7 @@ const Line: React.FC<LineProps> = ({height}) => (
     style={{
       borderTop: "1px solid white",
       position: "absolute",
+
       transition: "height 0.3s ease",
       left: "50%",
       transform: "translate(-50%, -50%)",
