@@ -9,7 +9,7 @@ interface Project {
   title: string;
 }
 
-const Projects: React.FC = () => {
+const Projects = () => {
   const [isAdding, setIsAdding] = useState(false);
   const [projects, setProjects] = useState<Project[]>([]);
   const [lineHeight, setLineHeight] = useState(0);
@@ -37,11 +37,10 @@ const Projects: React.FC = () => {
         style={{
           height: `${topSectionHeight}%`,
           display: "flex",
-          border: "2px dotted red", // Add red dotted border
           boxSizing: "border-box", // Include border in the height calculation
         }}
       >
-        <div style={{width: "45%", backgroundColor: "lightgray"}}>
+        <div style={{width: "45%", backgroundColor: "black"}}>
           {projects.map((project, index) => {
             if (index % 2 === 0) {
               return (
@@ -65,14 +64,14 @@ const Projects: React.FC = () => {
             return null;
           })}
         </div>
-        <div style={{width: "10%", backgroundColor: "lightgray", position: "relative"}}>
+        <div style={{width: "10%", backgroundColor: "black", position: "relative"}}>
           <Line height={lineHeight} />
         </div>
-        <div style={{width: "45%", backgroundColor: "lightgray"}}>
+        <div style={{width: "45%", backgroundColor: "black"}}>
           {projects.map((project, index) => {
             if (index % 2 !== 0) {
               return (
-                <div key={project.id} style={{border: "1px dotted red", marginTop: "14vh", position: "relative"}}>
+                <div key={project.id} style={{marginTop: "14vh", position: "relative"}}>
                   <RightCard title={project.title} />
                   <div
                     style={{

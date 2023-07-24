@@ -1,0 +1,22 @@
+/* components/NavBar.module.css */
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 120px;
+    background-color: red;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  

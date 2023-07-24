@@ -4,7 +4,7 @@ interface LineProps {
   height: number;
 }
 
-const Line: React.FC<LineProps> = ({height}) => (
+const Line = ({height}: LineProps) => (
   <div
     style={{
       borderTop: "1px solid white",

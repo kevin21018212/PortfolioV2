@@ -4,7 +4,7 @@ interface CardProps {
   title: string;
 }
 
-const LeftCard: React.FC<CardProps> = ({title}) => {
+const LeftCard = ({title}: CardProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = () => {
