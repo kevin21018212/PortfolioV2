@@ -1,22 +1,70 @@
-/* components/NavBar.module.css */
+
 .navbar {
     position: fixed;
-    top: 0;
-    right: 0;
-    width: 120px;
-    background-color: red;
-    padding: 20px;
+   
+    right: 10px;
+    width: 75px; 
     display: flex;
     flex-direction: column;
+    background-color: transparent; 
+    margin: 0;
+    overflow: hidden; 
   }
   
-  .navbar a {
+  .red-rectangle {
+    width: 100%;
+    height: 30px; 
+    background-color: red;
+  }
+  
+  .red-triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100px 25px 0;
+    border-color: transparent red transparent transparent;
+    
+   
+  }
+  
+  .link {
+  width: 180%;
+  box-sizing: border-box;
+  background-color: red;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+  transform-origin: top right; 
+  padding-left: 50%; 
+  margin-left: -25px;
+  transform: skew(-10deg) rotate(25deg); 
+}
+.empty-rhombus {
+    width: 180%;
+    box-sizing: border-box;
+    background-color: red;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+    transform-origin: top right; 
+    margin-left: -25px;
+    transform: skew(-10deg) rotate(25deg); 
+  }
+
+
+
+
+
+  
+  .link:hover {
+    background-color: gray;
+  }
+  
+  .link a {
     color: white;
     text-decoration: none;
-    margin-bottom: 10px;
   }
   
-  .navbar a:hover {
+  .link:hover a {
     text-decoration: underline;
+    color: gray;
   }
   
