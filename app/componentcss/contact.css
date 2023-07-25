@@ -1,0 +1,52 @@
+/* Contact.module.css */
+.contact-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #181818;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+   
+  }
+  
+  .heading {
+    color: rgb(255, 253, 250);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input,
+  textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #2f2f2f;
+    border: 1px solid rgb(255, 253, 250);
+    color: rgb(255, 253, 250);
+    border-radius: 4px;
+  }
+  
+  input::placeholder,
+  textarea::placeholder {
+    color: #888;
+  }
+  
+  .submit-button {
+    padding: 10px 15px;
+    background-color: rgb(255, 253, 250);
+    border: none;
+    color: #181818;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: rgb(255, 253, 250);
+  }
+  

@@ -1,8 +1,8 @@
 "use client";
 import React, {useState} from "react";
+import "../componentcss/project.css";
 import RightCard from "./rightcard";
-import LeftCard from "./leftcard";
-import Line from "./line";
+import Crescent from "./cresent";
 
 interface Project {
   id: number;
@@ -10,10 +10,8 @@ interface Project {
 }
 
 const Projects = () => {
-  const [isAdding, setIsAdding] = useState(false);
   const [projects, setProjects] = useState<Project[]>([]);
   const [lineHeight, setLineHeight] = useState(0);
-  const topSectionHeight = 0 + lineHeight / 12;
 
   const handleAddProject = () => {
     const newProject: Project = {
@@ -21,77 +19,50 @@ const Projects = () => {
       title: `Project ${projects.length + 1}`,
     };
 
-    if (isAdding) {
-      setProjects([...projects, newProject]);
-    } else {
-      setProjects([newProject, ...projects]);
-    }
+    setProjects([...projects, newProject]);
+    setLineHeight(lineHeight + 120);
 
-    setIsAdding(!isAdding); // Toggle the isAdding state
-    setLineHeight(lineHeight + 180); // Increase line height by 180 each time
+  const calculateTopDivHeight = () => {
+    return projects.reduce((acc, project) => acc + 120, 0);
+  };
+
+  const calculateCardPosition = (index: number) => {
+    // Calculate the position of each card based on the angle of the circle
+    const circleRadius = lineHeight / 3; // Adjust this value to reduce the distance between cards and the crescent
+    const totalCards = projects.length;
+    const angleIncrement = (Math.PI - 0.1) / (totalCards - 1); // Decrease the angle increment for a larger angle between cards
+    const angle = Math.PI / 2 - index * angleIncrement; // Start from 90 degrees (bottom) and subtract the angle increment for each card
+    const x = circleRadius * Math.cos(angle);
+    const y = -circleRadius * Math.sin(angle); // Flip the y coordinate vertically
+
+    // Calculate the position of the card relative to the circle
+    const cardX = x + circleRadius + 0;
+    const cardY = y + circleRadius + 30 * index; // Increase the offset for each card to be lower than the previous card
+
+    return {left: cardX, top: cardY};
   };
 
   return (
-    <div style={{height: "100vh", display: "flex", flexDirection: "column"}}>
-      <div
-        style={{
-          height: `${topSectionHeight}%`,
-          display: "flex",
-          boxSizing: "border-box", // Include border in the height calculation
-        }}
-      >
-        <div style={{width: "45%", backgroundColor: "black"}}>
-          {projects.map((project, index) => {
-            if (index % 2 === 0) {
-              return (
-                <div key={project.id} style={{marginBottom: "15vh", position: "relative"}}>
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "50%",
-                      left: "100%",
-                      transform: "translateY(-50%)",
-                      width: "11%",
-                      height: "5px",
-                      backgroundColor: "white",
-                      zIndex: "9999", // Set a high z-index value
-                    }}
-                  />
-                  <LeftCard title={project.title} />
-                </div>
-              );
-            }
-            return null;
-          })}
+    <div className='projects-container'>
+      {/* Top Section */}
+      <div className='top-section' style={{height: `${calculateTopDivHeight()}px`}}>
+        {/* Left Section (Line) */}
+        <div className='line-container'>
+          <Crescent height={lineHeight} />
         </div>
-        <div style={{width: "10%", backgroundColor: "black", position: "relative"}}>
-          <Line height={lineHeight} />
-        </div>
-        <div style={{width: "45%", backgroundColor: "black"}}>
-          {projects.map((project, index) => {
-            if (index % 2 !== 0) {
-              return (
-                <div key={project.id} style={{marginTop: "14vh", position: "relative"}}>
-                  <RightCard title={project.title} />
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "50%",
-                      right: "100%",
-                      transform: "translateY(-50%)",
-                      width: "11%",
-                      height: "5px",
-                      backgroundColor: "white",
-                    }}
-                  />
-                </div>
-              );
-            }
-            return null;
-          })}
+
+        {/* Right Section (Card List) */}
+        <div className='card-list'>
+          {projects.map((project, index) => (
+            <div key={project.id} className='card' style={{position: "absolute", ...calculateCardPosition(index)}}>
+              <RightCard title={project.title} />
+            </div>
+          ))}
         </div>
       </div>
-      <div style={{height: "20%"}}>
+
+      {/* Bottom Section */}
+      <div className='bottom-section'>
         <button onClick={handleAddProject}>Add</button>
       </div>
     </div>

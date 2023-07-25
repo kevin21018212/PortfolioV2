@@ -1,35 +1,65 @@
+
+
+
+.projects-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-section {
+  height: 80%;
+  display: flex;
+  position: relative; /* Add this property to make positioning easier */
+}
+
+.line-container {
+  width: 30%;
+  background-color: black;
+  position: relative;
+}
+
 .card-list {
-    position: relative;
-  }
-  
-  .line {
-    width: 2px;
-    height: 100%;
-    background-color: #ccc;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .card {
-    width: 200px;
-    height: 80px;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    transform: translateX(-50%);
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-  }
-  
-  .card.left {
-    right: 50%;
-  }
-  
-  .card.right {
-    left: 50%;
-  }
+  width: 70%;
+  background-color: black;
+  position: absolute; /* Change position to absolute */
+ 
+  left: 0%; /* Adjust the left property to move the card-list closer to the crescent */
+}
+
+
+
+
+.line {
+  width: 2px;
+  height: 100%;
+  background-color: #ccc;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card {
+  width: 200px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+ 
+}
+
+.card .line {
+  position: absolute;
+  top: 50%;
+  left: -11%;
+  width: 11%;
+  height: 5px;
+  background-color: white;
+}
+
+.bottom-section {
+  height: 20%;
+}
