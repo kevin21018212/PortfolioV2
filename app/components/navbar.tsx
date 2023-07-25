@@ -10,7 +10,7 @@ const NavBar = () => {
       {/* Red triangle */}
       <div className='red-triangle'></div>
       {/* Blue parallelogram shapes */}
-      <div className='link'>
+      <div className='first-link'>
         <Link href='/'>Home</Link>
       </div>
       <div className='link'>

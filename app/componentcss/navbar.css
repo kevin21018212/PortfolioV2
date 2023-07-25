@@ -1,70 +1,78 @@
-
 .navbar {
-    position: fixed;
-   
-    right: 10px;
-    width: 75px; 
-    display: flex;
-    flex-direction: column;
-    background-color: transparent; 
-    margin: 0;
-    overflow: hidden; 
-  }
-  
-  .red-rectangle {
-    width: 100%;
-    height: 30px; 
-    background-color: red;
-  }
-  
-  .red-triangle {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 100px 25px 0;
-    border-color: transparent red transparent transparent;
-    
-   
-  }
-  
-  .link {
+  position: fixed;
+  right: 10px;
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  margin: 0;
+  overflow: hidden;
+}
+
+.red-rectangle {
+  width: 100%;
+  height: 30px;
+  background-color: red;
+}
+
+.red-triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100px 25px 0;
+  border-color: transparent red transparent transparent;
+}
+
+.link,
+.first-link {
+  width: 190%;
+  box-sizing: border-box;
+  background-color: red;
+  padding: 20px;
+  font-family: 'Sequel Black', sans-serif;
+  font-size: small;
+  transform-origin: top right;
+  padding-left: 65%;
+  margin-left: -39px;
+  transform: skew(-10deg) rotate(25deg);
+  transition: transform 0.5s ease; /* Only transition the transform property */
+}
+
+.first-link {
+  padding-left: 80%; /* Adjust padding for the first link */
+}
+
+.empty-rhombus {
   width: 180%;
   box-sizing: border-box;
   background-color: red;
   padding: 20px;
   transition: background-color 0.3s ease;
-  transform-origin: top right; 
-  padding-left: 50%; 
+  transform-origin: top right;
   margin-left: -25px;
-  transform: skew(-10deg) rotate(25deg); 
+  transform: skew(-10deg) rotate(25deg);
 }
-.empty-rhombus {
-    width: 180%;
-    box-sizing: border-box;
-    background-color: red;
-    padding: 20px;
-    transition: background-color 0.3s ease;
-    transform-origin: top right; 
-    margin-left: -25px;
-    transform: skew(-10deg) rotate(25deg); 
-  }
+
+.link:hover,
+.first-link:hover {
+  background-color: gray;
+  padding-left:  45%;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.45) inset;
+  transform: skew(-10deg) rotate(25deg) translate(10px, -10px); /* Add translation and scaling on hover */
+}
+.first-link:hover {
+    padding-left:  55%;
+}
 
 
+.link a,
+.first-link a {
+  color: white;
+  text-decoration: none;
+}
 
-
-
-  
-  .link:hover {
-    background-color: gray;
-  }
-  
-  .link a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .link:hover a {
-    text-decoration: underline;
-    color: gray;
-  }
-  
+/* Add this to keep the rhombus shapes the same */
+.link:hover .empty-rhombus,
+.first-link:hover .empty-rhombus {
+  transform: skew(-10deg) rotate(25deg);
+}
