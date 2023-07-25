@@ -21,7 +21,7 @@ const Projects = () => {
 
     setProjects([...projects, newProject]);
     setLineHeight(lineHeight + 120);
-
+  }
   const calculateTopDivHeight = () => {
     return projects.reduce((acc, project) => acc + 120, 0);
   };
