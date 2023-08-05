@@ -4,6 +4,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  outline: 1px dotted red;
 }
 
 .top-section {

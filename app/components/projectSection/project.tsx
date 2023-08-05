@@ -1,42 +1,20 @@
 "use client";
 import React, {useState} from "react";
-import RightCard from "./rightcard";
+import "../../componentcss/project.css"; // Import the CSS file
+import defaultProjects from "./projectlist";
 import LeftCard from "./leftcard";
 import Line from "./line";
-import "../../componentcss/project.css"; // Import the CSS file
-
-interface Project {
-  id: number;
-  title: string;
-}
+import RightCard from "./rightcard";
 
 const Projects: React.FC = () => {
-  const [isAdding, setIsAdding] = useState(false);
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [lineHeight, setLineHeight] = useState<number>(0);
-
-  const handleAddProject = () => {
-    const newProject: Project = {
-      id: projects.length + 1,
-      title: `Project ${projects.length + 1}`,
-    };
-    if (isAdding) {
-      setProjects([newProject, ...projects]);
-    } else {
-      setProjects([...projects, newProject]);
-    }
-    setIsAdding(!isAdding);
-  };
-
-  const handleLineExpand = () => {
-    setLineHeight(lineHeight + 100); // Increase line height by 180 each time
-  };
+  const totalProjects = defaultProjects.length;
+  const lineHeight = totalProjects * 100;
 
   return (
-    <div className='projects-container'>
-      <div className='top-section' style={{"--topSectionHeight": lineHeight}}>
+    <div className='projects-container' style={{height: `${lineHeight}px`}}>
+      <div className='top-section' style={{"--topSectionHeight": `${lineHeight}px`}}>
         <div className='left-card-container'>
-          {projects.map((project, index) => {
+          {defaultProjects.map((project, index) => {
             if (index % 2 === 0) {
               return (
                 <div key={project.id} className='left-card'>
@@ -52,11 +30,11 @@ const Projects: React.FC = () => {
           <Line height={lineHeight} />
         </div>
         <div className='right-card-container'>
-          {projects.map((project, index) => {
+          {defaultProjects.map((project, index) => {
             if (index % 2 !== 0) {
               return (
                 <div key={project.id} className='right-card'>
-                  <RightCard title={project.title} />
+                  <RightCard key={project.id} project={project} />
                   <div className='right-card-line' />
                 </div>
               );
@@ -64,17 +42,6 @@ const Projects: React.FC = () => {
             return null;
           })}
         </div>
-      </div>
-      <div className='add-button-container'>
-        <button
-          className='add-button'
-          onClick={() => {
-            handleAddProject();
-            handleLineExpand();
-          }}
-        >
-          Add
-        </button>
       </div>
     </div>
   );
