@@ -1,5 +1,4 @@
-
-
+/* projects.css */
 
 .projects-container {
   height: 100vh;
@@ -8,58 +7,64 @@
 }
 
 .top-section {
-  height: 80%;
+  height: var(--topSectionHeight);
   display: flex;
-  position: relative; /* Add this property to make positioning easier */
+
+  box-sizing: border-box;
 }
 
-.line-container {
-  width: 30%;
-  background-color: black;
+.left-card-container {
+  width: 45%;
+
+}
+
+.left-card {
+  margin-bottom: 15vh;
   position: relative;
 }
 
-.card-list {
-  width: 70%;
-  background-color: black;
-  position: absolute; /* Change position to absolute */
- 
-  left: 0%; /* Adjust the left property to move the card-list closer to the crescent */
-}
-
-
-
-
-.line {
-  width: 2px;
-  height: 100%;
-  background-color: #ccc;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.card {
-  width: 200px;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
- 
-}
-
-.card .line {
+.left-card-line {
   position: absolute;
   top: 50%;
-  left: -11%;
+  left: 100%;
+  transform: translateY(-50%);
+  width: 11%;
+  height: 5px;
+  background-color: white;
+  z-index: 9999;
+}
+
+.line-container {
+  width: 10%;
+
+  position: relative;
+}
+
+.right-card-container {
+  width: 45%;
+
+}
+
+.right-card {
+
+  margin-top: 14vh;
+  position: relative;
+}
+
+.right-card-line {
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
   width: 11%;
   height: 5px;
   background-color: white;
 }
 
-.bottom-section {
+.add-button-container {
   height: 20%;
+}
+
+.add-button {
+  cursor: pointer;
 }

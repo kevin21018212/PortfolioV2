@@ -4,7 +4,7 @@ interface CardProps {
   title: string;
 }
 
-const RightCard = ({title}: CardProps) => {
+const RightCard: React.FC<CardProps> = ({title}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = () => {
@@ -17,8 +17,8 @@ const RightCard = ({title}: CardProps) => {
 
   const cardStyle = {
     backgroundColor: "white",
-    width: isHovered ? "300px" : "20px",
-    height: isHovered ? "150px" : "20px",
+    width: isHovered ? "300px" : "50px",
+    height: isHovered ? "150px" : "50px",
     borderRadius: isHovered ? "0" : "50%",
     padding: "1rem",
     marginRight: isHovered ? "calc(100% - 300px)" : "auto",

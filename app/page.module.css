@@ -25,6 +25,14 @@
   gap: 0.5rem;
 }
 
+.container {
+  display: flex;
+
+  height: 100vh; /* Adjust the height as needed */
+
+}
+
+
 .description p {
   position: relative;
   margin: 0;

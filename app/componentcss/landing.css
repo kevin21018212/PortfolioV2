@@ -7,8 +7,10 @@
   
   .landing-title {
     font-size: 2.5rem;
+    color: white;
   }
   .landing-typewriter {
     margin-left: 5%;
     font-size: 5rem;
+    color:white
   }
