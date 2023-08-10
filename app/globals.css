@@ -5,42 +5,15 @@
   src: url('./Sequel100Black-75.ttf') format('truetype');
 
 }
-:root {
-  --font-family: 'SequelBlack', sans-serif;
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
-}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
-  }
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 
 body {
   max-width: 100vw;
   overflow-x: hidden;
   color: var(--foreground-rgb);
   font-family: var(--font-family);
-  background-color: black; /* You may want to adjust this value */
+  background-color: black;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
+

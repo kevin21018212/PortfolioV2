@@ -4,7 +4,6 @@ import styles from "./page.module.css";
 import NavBar from "./components/navbar";
 import Contact from "./components/contact";
 import Landing from "./components/landing";
-
 import {useEffect, useState} from "react";
 import LoadingAnimation from "./components/loading";
 import Projects from "./components/projectSection/project";
@@ -15,7 +14,7 @@ export default function Home() {
   useEffect(() => {
     const loadingTimer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(loadingTimer);
   }, []);
@@ -29,7 +28,7 @@ export default function Home() {
           <div className={styles.stack}>
             <NavBar />
             <Landing />
-            <Projects />
+            {/* <Projects /> */}
             <Contact />
           </div>
         </>

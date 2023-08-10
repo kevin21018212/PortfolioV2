@@ -35,11 +35,11 @@
   padding-left: 65%;
   margin-left: -39px;
   transform: skew(-10deg) rotate(25deg);
-  transition: transform 0.5s ease; /* Only transition the transform property */
+  transition: transform 0.5s ease; 
 }
 
 .first-link {
-  padding-left: 80%; /* Adjust padding for the first link */
+  padding-left: 80%; 
 }
 
 .empty-rhombus {

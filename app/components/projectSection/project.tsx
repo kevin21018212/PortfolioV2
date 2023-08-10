@@ -1,5 +1,5 @@
 "use client";
-import React, {useState} from "react";
+import React from "react";
 import "../../componentcss/project.css"; // Import the CSS file
 import defaultProjects from "./projectlist";
 import LeftCard from "./leftcard";
@@ -7,8 +7,8 @@ import Line from "./line";
 import RightCard from "./rightcard";
 
 const Projects: React.FC = () => {
-  const totalProjects = defaultProjects.length;
-  const lineHeight = totalProjects * 100;
+  const totalProjects: number = defaultProjects.length;
+  const lineHeight: number = totalProjects * 100;
 
   return (
     <div className='projects-container' style={{height: `${lineHeight}px`}}>

@@ -5,6 +5,6 @@ interface LineProps {
   height: number;
 }
 
-const Line: React.FC<LineProps> = ({height}) => <div className='line' style={{height: `${height}px`}} />;
+const Line = ({height}: LineProps) => <div className='line' style={{height: `${height}px`}} />;
 
 export default Line;

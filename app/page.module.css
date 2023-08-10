@@ -27,8 +27,7 @@
 
 .container {
   display: flex;
-
-  height: 100vh; /* Adjust the height as needed */
+  height: 100vh; 
 
 }
 

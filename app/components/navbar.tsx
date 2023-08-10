@@ -5,11 +5,8 @@ import Link from "next/link";
 const NavBar = () => {
   return (
     <div className='navbar'>
-      {/* Red rectangle */}
       <div className='red-rectangle'></div>
-      {/* Red triangle */}
       <div className='red-triangle'></div>
-      {/* Blue parallelogram shapes */}
       <div className='first-link'>
         <Link href='/'>Home</Link>
       </div>

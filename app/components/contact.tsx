@@ -19,8 +19,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would add the logic to send the form data to the server and handle the email sending process.
-    // You can use libraries like 'axios' or 'fetch' to make API requests to a backend service that handles the email sending.
     console.log("Form data:", formData);
   };
 

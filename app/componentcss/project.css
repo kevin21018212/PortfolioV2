@@ -1,4 +1,3 @@
-/* projects.css */
 
 .projects-container {
   height: 100vh;
@@ -10,56 +9,49 @@
 .top-section {
   height: var(--topSectionHeight);
   display: flex;
-
   box-sizing: border-box;
 }
 
-.left-card-container {
+.left-card-container,
+.right-card-container {
   width: 45%;
+}
 
+.left-card,
+.right-card {
+  position: relative;
 }
 
 .left-card {
   margin-bottom: 15vh;
-  position: relative;
 }
 
-.left-card-line {
+.right-card {
+  margin-top: 14vh;
+}
+
+.card-line {
   position: absolute;
   top: 50%;
-  left: 100%;
-  transform: translateY(-50%);
   width: 11%;
   height: 5px;
   background-color: white;
   z-index: 9999;
 }
 
-.line-container {
-  width: 10%;
-
-  position: relative;
+.card-line.left-card-line {
+  left: 100%;
+  transform: translateY(-50%);
 }
 
-.right-card-container {
-  width: 45%;
-
-}
-
-.right-card {
-
-  margin-top: 14vh;
-  position: relative;
-}
-
-.right-card-line {
-  position: absolute;
-  top: 50%;
+.card-line.right-card-line {
   right: 100%;
   transform: translateY(-50%);
-  width: 11%;
-  height: 5px;
-  background-color: white;
+}
+
+.line-container {
+  width: 10%;
+  position: relative;
 }
 
 .add-button-container {
