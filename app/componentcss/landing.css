@@ -9,12 +9,19 @@
   outline:1px dotted red;
 }
 
-.landing-title,
-.landing-typewriter {
+.landing-cluster,.landing-content{
   font-size: 2.5rem;
   color: white;
   margin: 10px 0; 
 }
+.landing-cluster{
+  outline:1px dotted blue;
+  
+}
+.landing-content{
+  outline:1px dotted green;
+}
+
 
 .landing-typewriter {
   font-size: 5rem;
