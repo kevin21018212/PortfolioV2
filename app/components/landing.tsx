@@ -1,11 +1,45 @@
 // components/Landing.js
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {TypeAnimation} from "react-type-animation";
 import "../componentcss/landing.css";
 import Wave from "react-wavify";
-isFinite
+
+
+
+const fetchWeeklyContributions = async (username:string) => {
+  const today = new Date();
+  const oneWeekAgo = new Date();
+  oneWeekAgo.setDate(today.getDate() - 7); // Calculate date one week ago
+
+  const accessToken = process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN;
+
+  const response = await fetch(`https://api.github.com/search/commits?q=author:${username}+author-date:${oneWeekAgo.toISOString()}..${today.toISOString()}`, {
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+    },
+  });
+
+  const data = await response.json();
+  const contributionCount = data.total_count;
+
+  return contributionCount;
+};
+
 const Landing = () => {
+
+ 
+  const username = 'kevin21018212'; // Replace with your GitHub username
+
+  fetchWeeklyContributions(username)
+    .then((contributions) => {
+      console.log(`This week's contributions: ${contributions}`);
+    })
+    .catch((error) => {
+      console.error('Error fetching contributions:', error);
+    });
+
+
   return (
     <div className='landing-container'>
       <div className='landing-content'>

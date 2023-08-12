@@ -9,6 +9,9 @@ import LoadingAnimation from "./components/loading";
 import Projects from "./components/projectSection/project";
 
 export default function Home() {
+
+
+
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
