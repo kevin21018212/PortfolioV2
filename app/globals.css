@@ -1,11 +1,9 @@
 /* styles/fonts.css */
 
 @font-face {
-  font-family: 'Sequel Black';
-  src: url('./Sequel100Black-75.ttf') format('truetype');
-
+  font-family: "Sequel Black";
+  src: url("../public/Sequel100Black-75.ttf") format("truetype");
 }
-
 
 body {
   max-width: 100vw;
@@ -14,6 +12,3 @@ body {
   font-family: var(--font-family);
   background-color: black;
 }
-
-
-
