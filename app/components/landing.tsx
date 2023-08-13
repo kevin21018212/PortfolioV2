@@ -44,22 +44,41 @@ const Landing = () => {
   }, []);
  
   return (
-    
-    <div className='landing-container'>
-      <div className='landing-content'>
-        <div className='landing-title'>
+    <div className="landing-container">
+      <div className="landing-content">
+        <div className="landing-title">
           <h1>Hi, I'm Matthew </h1>
         </div>
-        <div className='landing-typewriter'>
-          <TypeAnimation sequence={["Developer", 3000, "Programmer", 3000, "Designer", 3000]} wrapper='span' speed={10} repeat={Infinity} />
+        <div className="landing-typewriter">
+          <TypeAnimation
+            sequence={["Developer", 3000, "Programmer", 3000, "Designer", 3000]}
+            wrapper="span"
+            speed={10}
+            repeat={Infinity}
+          />
         </div>
       </div>
-      <div className="landing-cluster">
-      <div className="wave-text">This week:  {amplitude}</div>
-      <div className="wave">
-      <Wave fill='#32CD32' paused={false} options={{ height: 30,amplitude:(amplitude*8), speed: 0.1, points: 3}}/>
+      <div className="landing-cluster">  
+        <div className="wave-box">
+          <div className="wave-text">This week: {amplitude}</div>
+            <div className="wave">
+            <Wave
+              fill="#32CD32"
+              paused={false}
+              options={{
+                height: 30,
+                amplitude: amplitude * 8,
+                speed: 0.1,
+                points: 3,
+              }}
+            />
+            </div>
+          </div>
+          <div className="updates-box">
+            <div className="updates-header">Updates</div>
+            <div className='updates-content'>content</div>
+          </div>
       </div>
-    </div>
     </div>
   );
 };

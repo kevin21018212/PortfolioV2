@@ -14,29 +14,65 @@
   font-size: 2.5rem;
   color: white;
   margin: 10px 0;
+}
+.landing-content {
+  outline: 1px dotted green;
+}
+.landing-typewriter {
+  font-size: 5rem;
+}
+
+.landing-cluster {
+  height: 60vh;
+  width: 45vw;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  outline: 1px dotted blue;
+  border: 1px solid #ccc;
+}
+
+.wave-box {
+  overflow: hidden;
+  height: 15vh;
+  width: 100%;
   outline: 1px solid gray;
+  grid-row: span 2;
+  grid-column: span 2;
 }
 .wave-text {
-  margin: 0px;
   font-size: 1.5rem;
   padding: 2.5%;
   color: #32cd32;
 }
-.landing-cluster {
-  height: 15vh;
-  overflow: hidden;
-}
-
 .wave {
   background-image: url("../../public/grid.png");
   background-size: 200% 200%;
   outline: 1px solid gray;
 }
 
-.landing-content {
-  outline: 1px dotted green;
+.updates-box {
+  border-radius: 25px;
+  height: 25vh;
+  width: 100%;
+  grid-row: span 2;
+  grid-column: span 2;
+  align-self: end;
+  justify-self: end;
+  background-color: red;
+  border: 1.5px solid white;
+}
+.updates-header {
+  font-size: 1rem;
+  padding: 5%;
+  outline: 1px dotted yellow;
+  height: 10%;
 }
 
-.landing-typewriter {
-  font-size: 5rem;
+.updates-content {
+  font-size: 0.5rem;
+  padding: 5%;
+  outline: 1px dotted green;
+  height: 50%;
 }
