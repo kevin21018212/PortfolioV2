@@ -23,14 +23,16 @@
 }
 
 .landing-cluster {
+  margin-left: 5%;
+  margin-top: -5%;
   height: 60vh;
   width: 45vw;
-
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  outline: 1px dotted blue;
-  border: 1px solid #ccc;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  z-index: 0;
+  position: relative;
 }
 
 .wave-box {
@@ -54,25 +56,45 @@
 
 .updates-box {
   border-radius: 25px;
-  height: 25vh;
-  width: 100%;
   grid-row: span 2;
   grid-column: span 2;
-  align-self: end;
-  justify-self: end;
-  background-color: red;
-  border: 1.5px solid white;
+  border: 2px solid white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 40%;
+  width: 45%;
+  overflow: hidden;
+  background-color: black;
 }
 .updates-header {
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 5%;
-  outline: 1px dotted yellow;
   height: 10%;
 }
 
 .updates-content {
-  font-size: 0.5rem;
-  padding: 5%;
-  outline: 1px dotted green;
-  height: 50%;
+  font-size: 1rem;
+  height: 75%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.grid-item {
+  border: 1px solid #ccc;
+  padding: 3px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap; /* Prevents the text from wrapping to the next line */
+  text-overflow: ellipsis;
+}
+
+.image-box {
+  background-color: green;
+  grid-row: 3 / span 2;
+  grid-column: 3 / span 2;
+  width: 100%;
+  height: 100%;
 }
