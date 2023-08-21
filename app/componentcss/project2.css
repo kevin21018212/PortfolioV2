@@ -1,0 +1,29 @@
+/*css for project 2 components circle class&*/
+/*circles should be on the left of the screen and empty in the middle and have the middle space filled in when hovered*/
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+  background-color: transparent;
+  border: px solid white;
+  transition: background-color 0.5s ease;
+  margin-left: 5%;
+  margin-top: 0.5%;
+}
+
+.circle:hover {
+  background-color: #555;
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+.projects-container {
+  height: 100vh;
+  outline: 1px dotted blue;
+}

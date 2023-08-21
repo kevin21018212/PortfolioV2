@@ -7,6 +7,7 @@ import Landing from "./components/landing";
 import {useEffect, useState} from "react";
 import LoadingAnimation from "./components/loading";
 import Projects from "./components/projectSection/project";
+import { Project2 } from "./components/project2";
 
 export default function Home() {
 
@@ -31,7 +32,7 @@ export default function Home() {
           <div className={styles.stack}>
             <NavBar />
             <Landing />
-            {/* <Projects /> */}
+            <Project2/>
             <Contact />
           </div>
         </>
