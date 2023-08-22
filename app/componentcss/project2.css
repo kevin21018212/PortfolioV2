@@ -1,19 +1,36 @@
-/*css for project 2 components circle class&*/
-/*circles should be on the left of the screen and empty in the middle and have the middle space filled in when hovered*/
+/* CSS for project 2 components circle class */
+/* Circles should be on the left of the screen and empty in the middle, and have the middle space filled in when hovered */
+.circle-container {
+  display: flex;
+  align-items: center;
+}
+
 .circle {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-
   background-color: transparent;
-  border: px solid white;
+  border: 1px solid white; /* You missed the value for border width, added '1px' */
   transition: background-color 0.5s ease;
-  margin-left: 5%;
-  margin-top: 0.5%;
+  margin-right: 5px; /* Adjusted margin to create space between circles */
+  cursor: pointer; /* Added cursor style to indicate interactivity */
 }
 
 .circle:hover {
   background-color: #555;
+}
+
+.circle.selected {
+  background-color: red;
+}
+
+.information {
+  background-color: white;
+  color: #555;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  text-align: center;
 }
 
 h1 {
@@ -23,7 +40,12 @@ h1 {
   font-family: "Open Sans", sans-serif;
   color: white;
 }
+
 .projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
-  outline: 1px dotted blue;
+  background-color: #333; /* Added background color to container */
 }
