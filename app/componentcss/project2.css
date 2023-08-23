@@ -1,19 +1,36 @@
-/* CSS for project 2 components circle class */
-/* Circles should be on the left of the screen and empty in the middle, and have the middle space filled in when hovered */
-.circle-container {
+.projects-container {
   display: flex;
-  align-items: center;
+  height: 40vh;
+  background-color: #333;
+}
+
+.projects-content {
+  display: flex;
+  border: 1px dotted green;
+  width: 95%;
+  position: relative;
+  margin: 1%;
+}
+
+.circles-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 5%;
+  padding-left: 3%;
+  padding-top: 1%;
+  background-color: whitesmoke;
 }
 
 .circle {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px solid white; /* You missed the value for border width, added '1px' */
+  border: 2px solid black;
   transition: background-color 0.5s ease;
-  margin-right: 5px; /* Adjusted margin to create space between circles */
-  cursor: pointer; /* Added cursor style to indicate interactivity */
+  cursor: pointer;
+  margin-top: 25px;
 }
 
 .circle:hover {
@@ -24,28 +41,68 @@
   background-color: red;
 }
 
-.information {
-  background-color: white;
-  color: #555;
-  padding: 10px;
-  border-radius: 5px;
-  margin-top: 5px;
-  text-align: center;
-}
-
-h1 {
-  font-size: 20px;
-  text-align: center;
-  margin-top: 20px;
-  font-family: "Open Sans", sans-serif;
+p {
+  font-family: "Sequel Black", sans-serif;
+  font-size: 1.5rem;
   color: white;
 }
+.textsmall {
+  font-family: "Sequel Black", sans-serif;
+  font-size: 0.7rem;
+  color: white;
+}
+.textlarge {
+  font-family: "Sequel Black", sans-serif;
+  font-size: 2.5rem;
+  color: white;
+}
+.top-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0.5rem;
+}
 
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #333; /* Added background color to container */
+.middle-right {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.top-middle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.middle-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom-middle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.content-card {
+  position: absolute;
+  right: 1%;
+  border: 1px solid white;
+  height: 36%;
+  width: 15%;
+  border-radius: 25px;
+  margin-top: 1%;
 }
