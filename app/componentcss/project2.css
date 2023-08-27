@@ -2,6 +2,7 @@
   display: flex;
   height: 40vh;
   background-color: #333;
+  z-index: -100;
 }
 
 .projects-content {
@@ -9,16 +10,18 @@
   width: 95%;
   position: relative;
   margin: 1%;
+  z-index: 10;
 }
 
 .circles-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 5%;
-  padding-left: 3%;
+  width: 3%;
+  padding-left: 1.5%;
   padding-top: 1%;
   background-color: whitesmoke;
+  z-index: 10;
 }
 
 .circle {
@@ -57,17 +60,13 @@ p {
   position: absolute;
   top: 50%;
   left: 0;
-
-  height: 200px;
-  border: 1px solid blue;
   transform: translateY(-50%);
 }
 .middle-right p {
-  margin-top: 15;
-  margin-bottom: 0;
+  margin: 0;
 }
-.notop {
-  margin-top: 0;
+.pushup {
+  margin-top: 20;
 }
 
 .bottom-right {
@@ -75,30 +74,44 @@ p {
   bottom: 0;
   left: 0;
 }
-
+.bottom-right p {
+  margin: 0;
+}
 .top-middle {
   position: absolute;
   top: 0;
-  left: 70%;
-
+  left: 68%;
   height: 100px;
   width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   transform: translateX(-50%);
+}
+.top-middle p {
+  margin: 0;
 }
 
 .middle-middle {
   position: absolute;
   top: 50%;
-  left: 70%;
+  left: 68%;
   width: 250px;
   transform: translate(-50%, -50%);
+  text-align: left;
 }
 
 .bottom-middle {
   position: absolute;
   bottom: 0;
-  left: 70%;
+  left: 68%;
+  width: 250px;
+  height: 50px;
   transform: translateX(-50%);
+  white-space: pre-wrap;
+}
+.bottom-middle p {
+  margin: 0;
 }
 
 .content-card {
@@ -107,7 +120,7 @@ p {
 
   background-image: url("../../public/scifi.jpg");
   height: 36%;
-  width: 15%;
+  width: 20%;
   margin-top: 1%;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%, 0 75%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%, 0 75%);
