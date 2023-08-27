@@ -4,7 +4,7 @@ import "../componentcss/project2.css";
 export const Project2 = () => {
   const [selectedCircle, setSelectedCircle] = useState(null);
 
-  const handleCircleClick = (circleId) => {
+  const handleCircleClick = (circleId:any) => {
     setSelectedCircle(circleId);
   };
 

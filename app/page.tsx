@@ -1,12 +1,11 @@
 "use client";
-import Image from "next/image";
 import styles from "./page.module.css";
-import NavBar from "./components/navbar";
 import Contact from "./components/contact";
 import Landing from "./components/landing";
 import {useEffect, useState} from "react";
 import LoadingAnimation from "./components/loading";
 import { Project2 } from "./components/project2";
+import Spacer from "./components/spacer";
 
 export default function Home() {
 
@@ -29,8 +28,9 @@ export default function Home() {
       ) : (
         <>
           <div className={styles.stack}>
-            <NavBar />
+      
             <Landing />
+            <Spacer title=" New Projects"/>
             <Project2/>
             <Contact />
           </div>

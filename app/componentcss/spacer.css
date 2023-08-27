@@ -1,0 +1,13 @@
+.spacer-container {
+  height: 10vh;
+  width: 100vw;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  padding-left: 1%;
+}
+
+.spacer-container p {
+  color: black;
+  font-size: 4rem;
+}
