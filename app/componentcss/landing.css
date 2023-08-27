@@ -1,6 +1,6 @@
 .landing-container {
   width: 100vw;
-  height: 80vh;
+  height: 72vh;
   display: flex;
   padding-top: 10%;
   padding-left: 5%;
@@ -34,11 +34,11 @@
 }
 
 .wave-box {
-  background-color: black;
+  background-color: #2d132c;
   overflow: hidden;
   height: 15vh;
   width: 100%;
-  outline: 1px solid gray;
+  outline: 1.5px solid #7f1437;
   grid-row: 1 / span 2;
   grid-column: 1 / span 2;
   z-index: 0;
@@ -48,7 +48,7 @@
 .wave-text {
   font-size: 1.5rem;
   padding: 2.5%;
-  color: #32cd32;
+  color: #c72b40;
 }
 .wave {
   background-image: url("../../public/grid.png");
@@ -60,14 +60,14 @@
   border-radius: 25px;
   grid-row: span 2;
   grid-column: span 2;
-  border: 2px solid white;
+  border: 2px solid #7f1437;
   position: absolute;
   bottom: 0;
   right: 0;
   height: 40%;
   width: 45%;
   overflow: hidden;
-  background-color: black;
+  background-color: #2d132c;
   z-index: 2;
 }
 .updates-header {
@@ -86,12 +86,15 @@
 }
 
 .grid-item {
-  border: 1px solid #ccc;
+  border: 1px solid #7f1437;
   padding: 3px;
   text-align: center;
   overflow: hidden;
   white-space: nowrap; /* Prevents the text from wrapping to the next line */
   text-overflow: ellipsis;
+  font-family: "Byotone Medium", sans-serif;
+  font-size: 1rem;
+  color: white;
 }
 
 .image-box {

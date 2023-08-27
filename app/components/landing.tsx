@@ -65,7 +65,7 @@ const Landing = () => {
           <div className="wave-text">This week: {amplitude}</div>
             <div className="wave">
             <Wave
-              fill="#32CD32"
+              fill="#c72b40"
               paused={false}
               options={{
                 height: 30,
@@ -77,7 +77,7 @@ const Landing = () => {
             </div>
           </div>
           <div className="updates-box">
-            <div className="updates-header">Updates</div>
+            <div className="updates-header"><p className="texttitle">Updates</p></div>
             <div className='updates-content'>
 
               <div className="grid-item">83577b6</div>
