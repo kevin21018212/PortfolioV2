@@ -47,15 +47,17 @@ const Landing = () => {
     <div className="landing-container">
       <div className="landing-content">
         <div className="landing-title">
-          <h1>Hi, I'm Matthew </h1>
+          <p className="textlarge">Hi, I'm Matthew </p>
         </div>
         <div className="landing-typewriter">
+          <div className="texttitle">
           <TypeAnimation
             sequence={["Developer", 3000, "Programmer", 3000, "Designer", 3000]}
             wrapper="span"
             speed={10}
             repeat={Infinity}
           />
+          </div>
         </div>
       </div>
       <div className="landing-cluster">  
