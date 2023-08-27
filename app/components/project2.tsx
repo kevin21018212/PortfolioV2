@@ -29,9 +29,12 @@ export const Project2 = () => {
         ))}
       </div>
       <div className="projects-content">
-        <div className="top-right"><p className="textsmall">Project001</p></div>
-        <div className="middle-right"><p className="textlarge">Portfolio V2</p>
-        <p className="textsmall">KevCo</p></div>
+        <div className="top-right"><p className="textsmall">A platform for ideas</p></div>
+        <div className="middle-right">
+          <p className="textlarge">Project001</p>
+          <p className="notop" >Protfolio V2</p>
+          <p className="textsmall">KevCo</p>
+        </div>
         <div className="bottom-right"><p>7:50 PM</p></div>
         <div className="top-middle"></div>
         <div className="middle-middle"><p className="textsmall">Anguler,Brutalist,Chaotic the centeral idea of this project was finding chaos in space and the serenity that sourounds it.</p></div>

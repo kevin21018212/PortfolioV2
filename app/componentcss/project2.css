@@ -57,8 +57,17 @@ p {
   position: absolute;
   top: 50%;
   left: 0;
-  padding: 0;
+
+  height: 200px;
+  border: 1px solid blue;
   transform: translateY(-50%);
+}
+.middle-right p {
+  margin-top: 15;
+  margin-bottom: 0;
+}
+.notop {
+  margin-top: 0;
 }
 
 .bottom-right {
