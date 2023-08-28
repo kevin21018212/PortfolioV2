@@ -32,7 +32,9 @@ export default function Home() {
             <Landing />
             <Spacer title=" New Projects"/>
             <Project2/>
-            <Contact />
+  
+            <Spacer title="About Me"/>
+     
           </div>
         </>
       )}

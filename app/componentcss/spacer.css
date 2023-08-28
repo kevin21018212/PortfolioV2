@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   padding-left: 1%;
+  margin-left: -1%;
 }
 
 .spacer-container p {
