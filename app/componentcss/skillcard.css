@@ -1,0 +1,29 @@
+.skill-card {
+  background-color: white;
+  width: 20vw;
+  height: 100%;
+}
+.skill-card p {
+  color: black;
+  margin: 1%;
+  margin-bottom: 0;
+}
+.image {
+  width: 50%;
+  height: 50%;
+  background-image: url("https://d2zjx838egoiiq.cloudfront.net/077a0cef/web%20dev-NEW.jpg");
+  object-fit: contain;
+}
+.text {
+  width: 50%;
+  height: 50%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  padding: 2%;
+}
+.card-middle {
+  display: flex;
+  height: 40vh;
+  margin: 2%;
+}

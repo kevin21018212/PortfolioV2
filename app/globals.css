@@ -45,6 +45,12 @@ body {
   font-size: 1rem;
   color: white;
 }
+
+.textmedium {
+  font-family: "Byotone", sans-serif;
+  font-size: 1rem;
+  color: white;
+}
 .textlarge {
   font-family: "Genesys", sans-serif;
   font-size: 3rem;
