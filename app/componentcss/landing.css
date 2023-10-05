@@ -6,10 +6,12 @@
   padding-left: 5%;
   justify-content: flex-start;
   align-items: flex-start;
+  background-image: ("../../public/y2kbackground.jpg");
 }
 
 .landing-typewriter {
   font-size: 5rem;
+  margin-left: 5%;
 }
 .landing-content {
   width: 40vw;
@@ -17,7 +19,8 @@
   flex-direction: column;
 }
 .landing-title {
-  display: flex;
+  font-size: 3rem;
+  margin-bottom: -2%;
 }
 
 .landing-cluster {
@@ -90,7 +93,7 @@
   padding: 3px;
   text-align: center;
   overflow: hidden;
-  white-space: nowrap; /* Prevents the text from wrapping to the next line */
+  white-space: nowrap;
   text-overflow: ellipsis;
   font-family: "Byotone Medium", sans-serif;
   font-size: 1rem;

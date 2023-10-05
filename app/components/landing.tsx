@@ -46,9 +46,7 @@ const Landing = () => {
   return (
     <div className="landing-container">
       <div className="landing-content">
-        <div className="landing-title">
-          <p className="textlarge">Hi, I'm Matthew </p>
-        </div>
+          <p className="landing-title">Hi, I'm Matthew </p>
         <div className="landing-typewriter">
           <div className="texttitle">
           <TypeAnimation

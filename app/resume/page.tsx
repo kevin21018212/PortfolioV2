@@ -12,7 +12,7 @@ const ResumePage = () => {
     
       <>
         <Spacer title="Skills" /><div className="skills-section">
-         <><SkillCard /><SkillCard /><SkillCard /><SkillCard /><SkillCard /></>
+       <><SkillCard /><SkillCard /><SkillCard /><SkillCard /><SkillCard /></>
         </div>
         <Spacer title="Experience" />
         <div className="experince-section"></div>
