@@ -63,7 +63,7 @@ const Landing = () => {
           <div className="wave-text">This week: {amplitude}</div>
             <div className="wave">
             <Wave
-              fill="#c72b40"
+              fill="#FAF9F6"
               paused={false}
               options={{
                 height: 30,

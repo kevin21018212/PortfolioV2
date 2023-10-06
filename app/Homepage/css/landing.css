@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #f0f0f0;
+  --secondary-color: #ef0017;
+  --background-color: #0a0a0a;
+}
 .landing-container {
   width: 100vw;
   height: 72vh;
@@ -6,7 +11,7 @@
   padding-left: 5%;
   justify-content: flex-start;
   align-items: flex-start;
-  background-image: ("../../public/y2kbackground.jpg");
+  background-color: var(--background-color);
 }
 
 .landing-typewriter {
@@ -37,41 +42,45 @@
 }
 
 .wave-box {
-  background-color: #2d132c;
   overflow: hidden;
   height: 15vh;
   width: 100%;
-  outline: 1.5px solid #7f1437;
+  outline: 1.5px solid var(--primary-color);
   grid-row: 1 / span 2;
   grid-column: 1 / span 2;
   z-index: 0;
   margin-left: -15%;
   margin-top: -5%;
+  background-color: var(--background-color);
+  box-shadow: 0px 1px 1px rgba(9, 30, 66, 0.25),
+    0px 0px 1px 1px rgba(9, 30, 66, 0.13);
 }
 .wave-text {
   font-size: 1.5rem;
   padding: 2.5%;
-  color: #c72b40;
+  color: var(--primary-color);
 }
 .wave {
   background-image: url("../../../public/grid.png");
   background-size: 200% 200%;
-  outline: 1px solid gray;
+  outline: 1px solid var(--primary-color);
 }
 
 .updates-box {
   border-radius: 25px;
   grid-row: span 2;
   grid-column: span 2;
-  border: 2px solid #7f1437;
+  border: 2px solid var(--primary-color);
   position: absolute;
   bottom: 0;
   right: 0;
   height: 40%;
   width: 45%;
   overflow: hidden;
-  background-color: #2d132c;
+  background-color: var(--background-color);
   z-index: 2;
+  box-shadow: 0px 1px 1px rgba(9, 30, 66, 0.25),
+    0px 0px 1px 1px rgba(9, 30, 66, 0.13);
 }
 .updates-header {
   font-size: 1.5rem;
@@ -89,7 +98,7 @@
 }
 
 .grid-item {
-  border: 1px solid #7f1437;
+  border: 1px solid var(--primary-color);
   padding: 3px;
   text-align: center;
   overflow: hidden;
@@ -97,7 +106,7 @@
   text-overflow: ellipsis;
   font-family: "Byotone Medium", sans-serif;
   font-size: 1rem;
-  color: white;
+  color: var(--primary-color);
 }
 
 .image-box {

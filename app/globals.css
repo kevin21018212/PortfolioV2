@@ -22,10 +22,15 @@
   src: url("../public/meeksa.ttf") format("truetype");
 }
 
+:root {
+  --primary-color: #f0f0f0;
+  --secondary-color: #ef0017;
+  --background-color: #0a0a0a;
+}
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  color: var(--foreground-rgb);
+  color: var(--background-color);
   font-family: var(--font-family);
 }
 .line {
