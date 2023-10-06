@@ -1,5 +1,5 @@
 import React from "react";
-import "../componentcss/loading.css";
+import "../css/loading.css";
 const LoadingAnimation = () => {
   return (
     <div className='loadingContainer'>

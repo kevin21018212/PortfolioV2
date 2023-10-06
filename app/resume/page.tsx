@@ -1,5 +1,5 @@
-import SkillCard from "../components/skillcard";
-import Spacer from "../components/spacer";
+import SkillCard from "../Homepage/components/skillcard";
+import Spacer from "../Global/spacer";
 import './resume.css'
 
 

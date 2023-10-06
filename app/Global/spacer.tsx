@@ -1,4 +1,4 @@
-import "../componentcss/spacer.css";
+import "./spacer.css";
 const Spacer = ({title}:any) => {
     return(
         <div className="spacer-container">

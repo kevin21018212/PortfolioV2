@@ -54,7 +54,7 @@
   color: #c72b40;
 }
 .wave {
-  background-image: url("../../public/grid.png");
+  background-image: url("../../../public/grid.png");
   background-size: 200% 200%;
   outline: 1px solid gray;
 }
@@ -101,7 +101,7 @@
 }
 
 .image-box {
-  background-image: url("../../public/me.png");
+  background-image: url("../../../public/me.png");
   background-size: cover; /* Adjust the sizing to your needs */
   grid-row: 2 / span 4;
   grid-column: 2 / span 3;

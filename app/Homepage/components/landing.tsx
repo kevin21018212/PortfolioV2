@@ -2,7 +2,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import {TypeAnimation} from "react-type-animation";
-import "../componentcss/landing.css";
+import "../css/landing.css";
 import Wave from "react-wavify";
 
 
