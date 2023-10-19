@@ -31,6 +31,8 @@ export const Project2 = () => {
         ))}
       </div>
       <div className="projects-content">
+
+        <div className="projects-content-right">
         <div className="top-right">
           <p className="textsmall">A platform for ideas</p>
         </div>
@@ -42,11 +44,12 @@ export const Project2 = () => {
           <p className="textsmall">KevCo</p>
           <p className="pushup">7:50 PM</p>
         </div>
-        <div className="top-middle">
-          <p className="texttitle">Idea</p>
-          <hr className="line"></hr>
         </div>
+
+
+        <div className="projects-content-left">
         <div className="middle-middle">
+          <p className="texttitle">Idea</p>
           <p className="textsmall">
             Anguler,Brutalist,Chaotic the centeral idea of this project was
             finding chaos in space and the serenity that sourounds it.
@@ -57,7 +60,10 @@ export const Project2 = () => {
           <div className="textxsmall"> focus on apis design</div>
         </div>
       </div>
-      <div className="content-card-container">
+      </div>
+
+      
+      <div className="project-image">
         <div className="content-card">
  
         </div>

@@ -2,24 +2,24 @@
 
 @font-face {
   font-family: "Sequel Black";
-  src: url("../public/Sequel100Black-75.ttf") format("truetype");
+  src: url("../public/fonts/Sequel100Black-75.ttf") format("truetype");
 }
 @font-face {
   font-family: "Genesys";
-  src: url("../public/Genesys.ttf") format("truetype");
+  src: url("../public/fonts/Genesys.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Byotone Thin";
-  src: url("../public/Byotone-Thin.ttf") format("truetype");
+  src: url("../public/fonts/Byotone-Thin.ttf") format("truetype");
 }
 @font-face {
   font-family: "Byotone Medium";
-  src: url("../public/Byotone-Medium.ttf") format("truetype");
+  src: url("../public/fonts/Byotone-Medium.ttf") format("truetype");
 }
 @font-face {
   font-family: "Abstract";
-  src: url("../public/meeksa.ttf") format("truetype");
+  src: url("../public/fonts/meeksa.ttf") format("truetype");
 }
 
 :root {
