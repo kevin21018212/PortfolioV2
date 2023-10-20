@@ -24,7 +24,7 @@
 
 :root {
   --primary-color: #f0f0f0;
-  --secondary-color: #ef0017;
+  --secondary-color: #fc4444;
   --background-color: #0a0a0a;
 }
 body {
@@ -41,7 +41,7 @@ body {
 
 .textxsmall {
   font-family: "Byotone Thin", sans-serif;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   color: white;
 }
 .textsmall {

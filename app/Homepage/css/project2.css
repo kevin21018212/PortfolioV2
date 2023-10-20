@@ -1,7 +1,7 @@
 .projects-container {
   display: flex;
   height: 65vh;
-  background-color: #333;
+  background-color: #0a0a0a;
   z-index: -100;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
@@ -43,11 +43,10 @@
 .circles-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  width: 3%;
-  padding-left: 1.5%;
-  padding-top: 7%;
-  background-color: #c72b40;
+  align-items: center;
+  justify-content: center;
+  width: 8%;
+  background: linear-gradient(to bottom, #FD2000, #DF007C);
   z-index: 10;
   box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.2);
 }
@@ -96,6 +95,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  font-size: 100px;
 }
 .bottom-right p {
   margin: 0;
@@ -133,3 +133,5 @@
   border: 1px solid white;
   box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.2);
 }
+
+
