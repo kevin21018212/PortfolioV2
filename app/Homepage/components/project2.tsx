@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../css/project2.css";
 
+
 export const Project2 = () => {
   const [selectedCircle, setSelectedCircle] = useState(null);
 
