@@ -1,16 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../css/project2.css";
-
 
 export const Project2 = () => {
   const [selectedCircle, setSelectedCircle] = useState(null);
+  const [projectData, setProjectData] = useState(null);
 
-  const handleCircleHover = (circleId) => {
-    setSelectedCircle(circleId);
-  };
+  useEffect(() => {
+    if (selectedCircle) {
+      // Simulate loading data with a delay (you can replace this with your actual data fetching logic)
+      const timer = setTimeout(() => {
+        const selectedProject = projects.find((project) => project.id === selectedCircle);
+        setProjectData(selectedProject);
+      }, 1000); // Adjust the delay as needed
+      return () => clearTimeout(timer);
+    } else {
+      setProjectData(null);
+    }
+  }, [selectedCircle]);
 
-  const resetSelectedCircle = () => {
-    setSelectedCircle(null);
+  const handleCircleClick = (circleId) => {
+    if (selectedCircle === circleId) {
+      setSelectedCircle(null);
+      setProjectData(null);
+    } else {
+      setSelectedCircle(circleId);
+    }
   };
 
   const circles = [
@@ -64,23 +78,6 @@ export const Project2 = () => {
     },
   ];
 
-  // Define the content for the "projects-content" section based on the selected circle
-  const getContentForSelectedCircle = () => {
-    if (selectedCircle) {
-      const selectedProject = projects.find((project) => project.id === selectedCircle);
-      return (
-        <div className="middle-middle">
-          <p className="texttitle">Idea</p> 
-          <p className="textsmall">{selectedProject.middleMiddle}</p>
-        </div>
-      );
-    }
-    // Default content when no circle is selected
-    return (
-   <></>
-    );
-  };
-
   return (
     <div className="projects-container">
       <div className="circles-container">
@@ -89,35 +86,47 @@ export const Project2 = () => {
             key={circle.id}
             className={`circle ${selectedCircle === circle.id ? "selected" : ""}`}
             id={circle.id}
-            onMouseEnter={() => handleCircleHover(circle.id)}
-            onMouseLeave={resetSelectedCircle}
+            onClick={() => handleCircleClick(circle.id)}
           ></div>
         ))}
       </div>
       <div className="projects-content">
         <div className="projects-content-right">
           <div className="top-right">
-            {selectedCircle && (
-              <p className="textsmall">{projects.find((project) => project.id === selectedCircle).topRight}</p>
+            {projectData && (
+              <p className={`textsmall fade-in ${projectData ? "active" : ""}`}>
+                {projectData.topRight}
+              </p>
             )}
           </div>
           <div className="middle-right">
-            {selectedCircle && (
-              <p className="textlarge">{projects.find((project) => project.id === selectedCircle).middleRight}</p>
+            {projectData && (
+              <p className={`textlarge fade-in ${projectData ? "active" : ""}`}>
+                {projectData.middleRight}
+              </p>
             )}
           </div>
           <div className="bottom-right">
-            {selectedCircle && (
-              <p className="textsmall">{projects.find((project) => project.id === selectedCircle).bottomRight}</p>
+            {projectData && (
+              <p className={`textsmall fade-in ${projectData ? "active" : ""}`}>
+                {projectData.bottomRight}
+              </p>
             )}
           </div>
         </div>
 
         <div className="projects-content-left">
-          {getContentForSelectedCircle()}
+          {projectData && (
+            <div className={`fade-in ${projectData ? "active" : ""}`}>
+              <p className="texttitle">Idea</p>
+              <p className="textsmall">{projectData.middleMiddle}</p>
+            </div>
+          )}
           <div className="bottom-middle">
-            {selectedCircle && (
-              <p className="textxsmall">{projects.find((project) => project.id === selectedCircle).bottomMiddle}</p>
+            {projectData && (
+              <p className={`textxsmall fade-in ${projectData ? "active" : ""}`}>
+                {projectData.bottomMiddle}
+              </p>
             )}
           </div>
         </div>
