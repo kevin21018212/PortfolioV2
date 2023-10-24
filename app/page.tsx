@@ -4,7 +4,7 @@ import Contact from "./Homepage/components/contact";
 import Landing from "./Homepage/components/landing";
 import {useEffect, useState} from "react";
 import LoadingAnimation from "./Homepage/components/loading";
-import { Project2 } from "./Homepage/components/project2";
+import  Project2  from "./Homepage/components/project2";
 import Spacer from "./Global/spacer";
 
 export default function Home() {

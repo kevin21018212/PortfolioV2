@@ -1,6 +1,19 @@
 import React, { useState, useEffect } from "react";
 import "../css/project2.css";
 
+interface circles {
+  id: string;
+  info: string;
+}
+
+interface projects {
+  id: string;
+  topRight: string;
+  middleRight: string;
+  bottomRight: string;
+  middleMiddle: string;
+  bottomMiddle: string;
+}
 const circles = [
   { id: "circle1", info: "Information for Circle 1" },
   { id: "circle2", info: "Information for Circle 2" },
@@ -52,15 +65,15 @@ const projects = [
   },
 ];
 
-const Project2 = () => {
-  const [selectedCircle, setSelectedCircle] = useState(null);
-  const [projectData, setProjectData] = useState(null);
+const Project2: React.FC = () => {
+  const [selectedCircle, setSelectedCircle] = useState<string | null>(null);
+  const [projectData, setProjectData] = useState<projects | null>(null);
 
   useEffect(() => {
     if (selectedCircle) {
       const timer = setTimeout(() => {
         const selectedProject = projects.find((project) => project.id === selectedCircle);
-        setProjectData(selectedProject);
+        setProjectData(selectedProject || null);
       }, 1000);
       return () => clearTimeout(timer);
     } else {
@@ -68,7 +81,7 @@ const Project2 = () => {
     }
   }, [selectedCircle]);
 
-  const handleCircleClick = (circleId) => {
+  const handleCircleClick = (circleId: string) => {
     if (selectedCircle === circleId) {
       setSelectedCircle(null);
     } else {
@@ -90,11 +103,13 @@ const Project2 = () => {
       </div>
       <div className="projects-content">
         {projectData && (
-          <><div className="projects-content-right">
-            <p className={`textsmall fade-in ${projectData ? "active" : ""}`}>{projectData.topRight}</p>
-            <p className={`textlarge fade-in ${projectData ? "active" : ""}`}>{projectData.middleRight}</p>
-            <p className={`textsmall fade-in ${projectData ? "active" : ""}`}>{projectData.bottomRight}</p>
-          </div><div className="projects-content-left">
+          <>
+            <div className="projects-content-right">
+              <p className={`textsmall fade-in ${projectData ? "active" : ""}`}>{projectData.topRight}</p>
+              <p className={`textlarge fade-in ${projectData ? "active" : ""}`}>{projectData.middleRight}</p>
+              <p className={`textsmall fade-in ${projectData ? "active" : ""}`}>{projectData.bottomRight}</p>
+            </div>
+            <div className="projects-content-left">
               <div className={`fade-in ${projectData ? "active" : ""}`}>
                 <p className="texttitle">Idea</p>
                 <p className="textsmall">{projectData.middleMiddle}</p>
@@ -102,7 +117,8 @@ const Project2 = () => {
               <div className="bottom-middle">
                 <p className={`textxsmall fade-in ${projectData ? "active" : ""}`}>{projectData.bottomMiddle}</p>
               </div>
-            </div></>
+            </div>
+          </>
         )}
       </div>
       <div className="project-image">

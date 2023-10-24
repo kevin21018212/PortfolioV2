@@ -1,4 +1,4 @@
-import "../componentcss/skillcard.css";
+import "../css/skillcard.css";
 const SkillCard = () => {
     return(
         <div className="skill-card">
