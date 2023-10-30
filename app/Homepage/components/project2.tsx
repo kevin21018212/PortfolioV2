@@ -105,9 +105,9 @@ const Project2: React.FC = () => {
         {projectData && (
           <>
             <div className="projects-content-right">
-              <p className={`textsmall fade-in ${projectData ? "active" : ""}`}>{projectData.topRight}</p>
-              <p className={`textlarge fade-in ${projectData ? "active" : ""}`}>{projectData.middleRight}</p>
-              <p className={`textsmall fade-in ${projectData ? "active" : ""}`}>{projectData.bottomRight}</p>
+              <p className={`textsmall  ${projectData ? "active" : ""}`}>{projectData.topRight}</p>
+              <p className={`textlarge ${projectData ? "active" : ""}`}>{projectData.middleRight}</p>
+              <p className={`textsmall  ${projectData ? "active" : ""}`}>{projectData.bottomRight}</p>
             </div>
             <div className="projects-content-left">
               <div className={`fade-in ${projectData ? "active" : ""}`}>
@@ -115,7 +115,7 @@ const Project2: React.FC = () => {
                 <p className="textsmall">{projectData.middleMiddle}</p>
               </div>
               <div className="bottom-middle">
-                <p className={`textxsmall fade-in ${projectData ? "active" : ""}`}>{projectData.bottomMiddle}</p>
+                <p className={`textxsmall  ${projectData ? "active" : ""}`}>{projectData.bottomMiddle}</p>
               </div>
             </div>
           </>

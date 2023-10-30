@@ -11,12 +11,10 @@
   width: 70%;
   position: relative;
   margin: 1%;
-
 }
 
 .project-image{
  width:30%;
-
  margin: 1%;
 }
 
@@ -25,6 +23,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  border: 1px dotted green;
   
 }
 
@@ -77,46 +76,8 @@
 
 
 /*Card content section*/
-.top-right {
- margin-left: -1%;
-}
 
-.middle-right {
-  margin-top: 40%;
-}
-.middle-right p {
-  margin: 0;
-}
-.pushup {
-  margin-top: 20;
-}
 
-.bottom-right {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  font-size: 100px;
-}
-.bottom-right p {
-  margin: 0;
-}
-
-.middle-middle {
- width: 300px;
- right: 0;
- margin-top: 30%;
-
-}
-
-.middle-middle p {
-  text-align: right;
-}
-
-.bottom-middle {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
 
 .content-card {
   position: absolute;
@@ -124,38 +85,8 @@
   height: 60%;
   width: 25%;
   margin-top: 1%;
-
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%, 0 75%);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%, 0 75%);
-  border: 1px solid white;
-  box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.2);
+  border: 1px dotted white;
 }
-
-/* Add a new class for the animation */
-.slide-in {
-  position: relative;
-  overflow: hidden;
-}
-
-.slide-in .text-container {
-  position: relative;
-  width: 0;
-  height: 100%;
-  background: white;
-  transition: width 0.5s ease-in-out;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-/* Style for the revealed text */
-.slide-in .text-container p {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
-}
-
 
 
 
