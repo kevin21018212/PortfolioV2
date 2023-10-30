@@ -90,12 +90,22 @@ const Project2: React.FC = () => {
     }
   };
 
+
+ const handleOpen = ()=>{
+  animate(".projects-container", { height: "65vh", opacity: 1 })
+ animate(".projects-component", { transform:"translateY(-65vh)" })
+  }
+const handleClose = () =>{
+  animate(".projects-container", { height: "0vh", opacity: 1 })
+  animate(".projects-component", { transform:"translateY(0vh)" })
+}
+
   return (
     <div className="projects-component">
       <div className="spacer-container">
       <p className="texttitle">New Projects </p>
-      <button onClick={() => animate(".projects-container", { height: "65vh", opacity: 1 })}></button>
-      <button onClick={() => animate(".projects-container", { height: "0vh", opacity: 1 })}></button>
+      <button onClick={()=> handleOpen()} ></button>
+      <button onClick={() =>   handleClose()}></button>
     </div><motion.div className="projects-container">
         <div className="circles-container">
           {circles.map((circle) => (

@@ -4,7 +4,7 @@ import "../../css/landing/landingtext.css";
 const LandingText = ()=>{
     return(   
      <div className="landing-content">
-    <p className="landing-title">Hi, I'm Matthew </p>
+    <div className="landing-title"><p>Hi, I'm Matthew</p></div>
   <div className="landing-typewriter">
     <div className="texttitle">
     <TypeAnimation

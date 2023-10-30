@@ -1,14 +1,17 @@
 .landing-cluster {
-    margin-left: 5%;
-    margin-top: 5%;
+
+    margin-top: 10%;
     height: 60vh;
-    width: 45vw;
+    width: 60%;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     z-index: 0;
     position: relative;
+    margin-right: 5%;
+   
+    
   }
   
   .wave-box {

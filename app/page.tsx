@@ -28,7 +28,9 @@ export default function Home() {
       ) : (
         <>
           <div className={styles.main}>
+           <div className={styles.landingcontainer}>
             <Landing />
+            </div>
             <div className={styles.projectcontainer}>
             <Project2/>
             </div>

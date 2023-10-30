@@ -4,9 +4,11 @@
   height: 100vh;
 }
 
+.landingcontainer{
+  height: 90%;
+}
 .projectcontainer {
- height: fit-content;
-
+ height: 10%;
 }
 
 
