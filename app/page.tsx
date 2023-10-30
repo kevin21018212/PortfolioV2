@@ -32,9 +32,6 @@ export default function Home() {
             <Landing />
             <Spacer title=" New Projects"/>
             <Project2/>
-  
-            <Spacer title="About Me"/>
-     
           </div>
         </>
       )}
