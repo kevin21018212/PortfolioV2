@@ -5,13 +5,14 @@
 }
 .landing-container {
   width: 100vw;
-  height: 72vh;
-  display: flex;
+  height: auto;
+  min-height: 90vh;
 
-  padding-left: 5%;
+  display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   background-color: var(--background-color);
+  padding: 5%;
 }
 
 

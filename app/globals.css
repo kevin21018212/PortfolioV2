@@ -27,12 +27,8 @@
   --secondary-color: #fc4444;
   --background-color: #0a0a0a;
 }
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  color: var(--background-color);
-  font-family: var(--font-family);
-}
+
+
 .line {
   border: 1px solid white;
   margin: 0;

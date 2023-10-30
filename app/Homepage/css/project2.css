@@ -1,10 +1,16 @@
+.projects-component{
+  z-index: 10;
+}
+
+
 .projects-container {
   display: flex;
-  height: 65vh;
+  height: 10;
+  opacity: 0;
   background-color: #0a0a0a;
-  z-index: -100;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
+
 
 .projects-content {
   display: flex;
@@ -20,18 +26,22 @@
 
 .projects-content-left{
   width: 50%;
+
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  border: 1px dotted green;
+  overflow-y: hidden;
+
   
 }
 
 .projects-content-right{
   width: 50%;
+
   margin-left: 2%;
   display: flex;
   flex-direction: column;
+  overflow-y: hidden;
 
 }
 
@@ -44,10 +54,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+ 
   width: 8%;
   background: linear-gradient(to bottom, #FD2000, #DF007C);
-  z-index: 10;
+
   box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.2);
+  overflow-y: hidden;
 }
 
 .circle {
@@ -69,24 +81,29 @@
 
 
 
-
-
-
-
-
-
-/*Card content section*/
-
-
-
-.content-card {
-  position: absolute;
-  right: 1%;
-  height: 60%;
-  width: 25%;
-  margin-top: 1%;
-  border: 1px dotted white;
+.spacer-container {
+  height: 10vh;
+  width: 100vw;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  padding-left: 2.5%;
 }
+
+.spacer-container p {
+  color: black;
+  font-size: 4rem;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

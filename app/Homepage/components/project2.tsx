@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { animate, motion } from "framer-motion"
 import "../css/project2.css";
 
 interface circles {
@@ -90,41 +91,45 @@ const Project2: React.FC = () => {
   };
 
   return (
-    <div className="projects-container">
-      <div className="circles-container">
-        {circles.map((circle) => (
-          <div
-            key={circle.id}
-            className={`circle ${selectedCircle === circle.id ? "selected" : ""}`}
-            id={circle.id}
-            onClick={() => handleCircleClick(circle.id)}
-          ></div>
-        ))}
-      </div>
-      <div className="projects-content">
-        {projectData && (
-          <>
-            <div className="projects-content-right">
-              <p className={`textsmall  ${projectData ? "active" : ""}`}>{projectData.topRight}</p>
-              <p className={`textlarge ${projectData ? "active" : ""}`}>{projectData.middleRight}</p>
-              <p className={`textsmall  ${projectData ? "active" : ""}`}>{projectData.bottomRight}</p>
-            </div>
-            <div className="projects-content-left">
-              <div className={`fade-in ${projectData ? "active" : ""}`}>
-                <p className="texttitle">Idea</p>
-                <p className="textsmall">{projectData.middleMiddle}</p>
+    <div className="projects-component">
+      <div className="spacer-container">
+      <p className="texttitle">New Projects </p>
+      <button onClick={() => animate(".projects-container", { height: "65vh", opacity: 1 })}></button>
+      <button onClick={() => animate(".projects-container", { height: "0vh", opacity: 1 })}></button>
+    </div><motion.div className="projects-container">
+        <div className="circles-container">
+          {circles.map((circle) => (
+            <div
+              key={circle.id}
+              className={`circle ${selectedCircle === circle.id ? "selected" : ""}`}
+              id={circle.id}
+              onClick={() => handleCircleClick(circle.id)}
+            ></div>
+          ))}
+        </div>
+        <div className="projects-content">
+          {projectData && (
+            <>
+              <div className="projects-content-right">
+                <p className={`textsmall  ${projectData ? "active" : ""}`}>{projectData.topRight}</p>
+                <p className={`textlarge ${projectData ? "active" : ""}`}>{projectData.middleRight}</p>
+                <p className={`textsmall  ${projectData ? "active" : ""}`}>{projectData.bottomRight}</p>
               </div>
-              <div className="bottom-middle">
-                <p className={`textxsmall  ${projectData ? "active" : ""}`}>{projectData.bottomMiddle}</p>
+              <div className="projects-content-left">
+                <div className={`${projectData ? "active" : ""}`}>
+                  <p className="texttitle">Idea</p>
+                  <p className="textsmall">{projectData.middleMiddle}</p>
+                </div>
+                <div className="bottom-middle">
+                  <p className={`textxsmall  ${projectData ? "active" : ""}`}>{projectData.bottomMiddle}</p>
+                </div>
               </div>
-            </div>
-          </>
-        )}
+            </>
+          )}
+        </div>
+       
+      </motion.div>
       </div>
-      <div className="project-image">
-        <div className="content-card"></div>
-      </div>
-    </div>
   );
 };
 

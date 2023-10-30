@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import {useEffect, useState} from "react";
 import LoadingAnimation from "./Homepage/components/loading";
 import  Project2  from "./Homepage/components/project2";
-import Spacer from "./Global/spacer";
+
 import Landing from "./Homepage/components/landing/landing";
 
 export default function Home() {
@@ -27,11 +27,11 @@ export default function Home() {
         <LoadingAnimation />
       ) : (
         <>
-          <div className={styles.stack}>
-      
+          <div className={styles.main}>
             <Landing />
-            <Spacer title=" New Projects"/>
+            <div className={styles.projectcontainer}>
             <Project2/>
+            </div>
           </div>
         </>
       )}

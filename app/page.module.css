@@ -1,20 +1,13 @@
 .main {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
-}
-
-.container {
-  display: flex;
+  flex-direction: column; 
   height: 100vh;
 }
 
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
+.projectcontainer {
+ height: fit-content;
+
 }
+
+
+
