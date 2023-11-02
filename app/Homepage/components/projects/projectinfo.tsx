@@ -1,41 +1,45 @@
-import { motion } from 'framer-motion';
-import React, { useState, useEffect } from 'react';
+import {motion} from "framer-motion";
+import React, {useState, useEffect} from "react";
 
-const ProjectInfo = ({ ProjectData }: any) => {
+// Define a type for project data
+type ProjectData = {
+  id: string;
+  topRight: string;
+  middleRight: string;
+  bottomRight: string;
+  middleMiddle: string;
+  bottomMiddle: string;
+};
+
+const ProjectInfo: React.FC<{projectData: ProjectData | null}> = ({projectData}) => {
   // State variable to track changes in projectData
 
-
-  function handleTextAnimation() {
-    throw new Error('Function not implemented.');
-}
+  function handleTextAnimation() {}
 
   useEffect(() => {
-
-    if (ProjectData) {
-      handleTextAnimation()
+    if (projectData) {
+      handleTextAnimation();
     }
-   
-  }, [ProjectData]);
+
+    console.log(projectData);
+  }, [projectData]);
 
   return (
-    <div className="projects-content">
-      {ProjectData&& (
-        <>
-          <div className="projects-content-right">
-            <motion.p className={`textsmall ${ProjectData ? "active" : ""}`}>{ProjectData.topRight}</motion.p>
-            <motion.p className={`textlarge ${ProjectData ? "active" : ""}`}>{ProjectData.middleRight}</motion.p>
-            <motion.p className={`textsmall ${ProjectData ? "active" : ""}`}>{ProjectData.bottomRight}</motion.p>
-          </div>
-          <div className="projects-content-left">
-            <motion.p className={`texttitle ${ProjectData ? "active" : ""}`}>Idea</motion.p>
-            <motion.p className={`textxmedium ${ProjectData ? "active" : ""}`}>{ProjectData.middleMiddle}</motion.p>
-            <motion.p className={`textxsmall ${ProjectData ? "active" : ""}`}>{ProjectData.bottomMiddle}</motion.p>
-          </div>
-        </>
-      )}
+    <div className='projects-content'>
+      <>
+        <div className='projects-content-right'>
+          <motion.p className={`textsmall `}>{projectData?.topRight}</motion.p>
+          <motion.p className={`textlarge `}>{projectData?.middleRight}</motion.p>
+          <motion.p className={`textsmall `}>{projectData?.bottomRight}</motion.p>
+        </div>
+        <div className='projects-content-left'>
+          <motion.p className={`texttitle`}>Idea</motion.p>
+          <motion.p className={`textxmedium`}>{projectData?.middleMiddle}</motion.p>
+          <motion.p className={`textxsmall`}>{projectData?.bottomMiddle}</motion.p>
+        </div>
+      </>
     </div>
   );
 };
 
 export default ProjectInfo;
-
