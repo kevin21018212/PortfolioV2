@@ -3,9 +3,8 @@ import styles from "./page.module.css";
 
 import {useEffect, useState} from "react";
 import LoadingAnimation from "./Homepage/components/loading";
-import  Project2  from "./Homepage/components/projects/project2";
-
 import Landing from "./Homepage/components/landing/landing";
+import Project from "./Homepage/components/projects/project";
 
 export default function Home() {
 
@@ -32,7 +31,7 @@ export default function Home() {
             <Landing />
             </div>
             <div className={styles.projectcontainer}>
-            <Project2/>
+            <Project/>
             </div>
           </div>
         </>

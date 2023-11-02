@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { animate, motion } from "framer-motion"
-import "../css/project2.css";
+import "../css/projects/project.css";
 import { projects } from "@/app/projectdata";
 import ProjectInfo from "./projectinfo";
 interface circles {
@@ -26,7 +26,7 @@ const circles = [
 ];
 
 
-const Project2: React.FC = () => {
+const Project = () => {
   const [selectedCircle, setSelectedCircle] = useState<string | null>(null);
   const [projectData, setProjectData] = useState<projects | null>(null);
 
@@ -83,4 +83,4 @@ const handleClose = () =>{
   );
 };
 
-export default Project2;
+export default Project;

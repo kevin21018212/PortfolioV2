@@ -13,38 +13,6 @@
 }
 
 
-.projects-content {
-  display: flex;
-  width: 70%;
-  position: relative;
-  margin: 1%;
-}
-
-.project-image{
- width:30%;
- margin: 1%;
-}
-
-.projects-content-left{
-  width: 50%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  overflow-y: hidden;
-
-  
-}
-
-.projects-content-right{
-  width: 50%;
-  margin-left: 2%;
-  display: flex;
-  flex-direction: column;
-  overflow-y: hidden;
-
-}
-
 
 
 
@@ -76,9 +44,6 @@
 .circle:hover {
   background-color: #0a0a0a;
 }
-
-
-
 
 
 .spacer-container {

@@ -1,27 +1,41 @@
+import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+
+const ProjectInfo = ({ ProjectData }: any) => {
+  // State variable to track changes in projectData
 
 
-
-const ProjectInfo = ({projectData}:any) =>{
- return(         <div className="projects-content">
- {projectData && (
-   <>
-     <div className="projects-content-right">
-       <p className={`textsmall  ${projectData ? "active" : ""}`}>{projectData.topRight}</p>
-       <p className={`textlarge ${projectData ? "active" : ""}`}>{projectData.middleRight}</p>
-       <p className={`textsmall  ${projectData ? "active" : ""}`}>{projectData.bottomRight}</p>
-     </div>
-     <div className="projects-content-left">
-       <div className={`${projectData ? "active" : ""}`}>
-         <p className="texttitle">Idea</p>
-         <p className="textsmall">{projectData.middleMiddle}</p>
-       </div>
-       <div className="bottom-middle">
-         <p className={`textxsmall  ${projectData ? "active" : ""}`}>{projectData.bottomMiddle}</p>
-       </div>
-     </div>
-   </>
- )}
-</div>
-)
+  function handleTextAnimation() {
+    throw new Error('Function not implemented.');
 }
+
+  useEffect(() => {
+
+    if (ProjectData) {
+      handleTextAnimation()
+    }
+   
+  }, [ProjectData]);
+
+  return (
+    <div className="projects-content">
+      {ProjectData&& (
+        <>
+          <div className="projects-content-right">
+            <motion.p className={`textsmall ${ProjectData ? "active" : ""}`}>{ProjectData.topRight}</motion.p>
+            <motion.p className={`textlarge ${ProjectData ? "active" : ""}`}>{ProjectData.middleRight}</motion.p>
+            <motion.p className={`textsmall ${ProjectData ? "active" : ""}`}>{ProjectData.bottomRight}</motion.p>
+          </div>
+          <div className="projects-content-left">
+            <motion.p className={`texttitle ${ProjectData ? "active" : ""}`}>Idea</motion.p>
+            <motion.p className={`textxmedium ${ProjectData ? "active" : ""}`}>{ProjectData.middleMiddle}</motion.p>
+            <motion.p className={`textxsmall ${ProjectData ? "active" : ""}`}>{ProjectData.bottomMiddle}</motion.p>
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
+
 export default ProjectInfo;
+
