@@ -21,6 +21,16 @@ const Project = () => {
   const [selectedCircle, setSelectedCircle] = useState<string | null>(null);
   const [projectData, setProjectData] = useState<any>(null);
 
+  const [isProjectOpen, setIsProjectOpen] = useState(false);
+
+  const handleToggleProject = () => {
+    if (isProjectOpen) {
+      handleClose();
+    } else {
+      handleOpen();
+    }
+    setIsProjectOpen(!isProjectOpen);
+  };
   const handleCircleClick = (circleId: string) => {
     const selectedProject = projects.find((project) => project.id === circleId);
 
@@ -38,11 +48,10 @@ const Project = () => {
 
   return (
     <div className='projects-component'>
-      <div className='spacer-container'>
-        <p className='texttitle'>New Projects </p>
-        <button onClick={() => handleOpen()}></button>
-        <button onClick={() => handleClose()}></button>
-      </div>
+     <div className='spacer-container'>
+      <p className='texttitle'>New Projects</p>
+      <button onClick={handleToggleProject} className={`toggle-button ${isProjectOpen ? 'up-arrow' : 'down-arrow'}`}></button>
+    </div>
       <motion.div className='projects-container'>
         <div className='circles-container'>
           {circles.map((circle) => (

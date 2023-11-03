@@ -1,6 +1,6 @@
 import {motion} from "framer-motion";
 import React, {useState, useEffect} from "react";
-
+import "../../css/projects/projectinfo.css"
 // Define a type for project data
 type ProjectData = {
   id: string;

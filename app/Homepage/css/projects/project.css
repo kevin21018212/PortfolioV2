@@ -1,7 +1,6 @@
 .projects-component{
   z-index: 100;
   height: 100%;
-
 }
 
 
@@ -11,6 +10,7 @@
   opacity: 0;
   background-color: #0a0a0a;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  height: 1px dotted red;
 }
 
 
@@ -54,6 +54,7 @@
   display: flex;
   align-items: center;
   padding-left: 2.5%;
+  padding-right: 7.5%;
 
 }
 
@@ -62,15 +63,44 @@
   font-size: 4rem;
 }
 
+.texttitle{width: 80% ;}
 
 
 
+/* Styles for the button container */
+.toggle-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  width: 20%; /* Full width */
+  height: 100%; /* Full height */
+  transition: transform 0.5s;
+}
 
+/* Common styles for both up and down arrow */
+.toggle-button::before,
+.toggle-button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  transition: transform 0.5s;
+}
 
+/* Styles for the up arrow */
+.toggle-button.up-arrow::before {
+  border-bottom-color: #000; /* Change color as needed */
+  top: 50%; /* Center vertically */
+ 
+  transform: translate(-50%, -50%) rotate(180deg); /* Center and rotate the arrow to face up */
+}
 
+/* Styles for the down arrow */
+.toggle-button.down-arrow::before {
+  border-bottom-color: #000; /* Change color as needed */
+  top: 50%; /* Center vertically */
 
-
-
-
-
-
+  transform: translate(-50%, -50%) rotate(0deg); /* Center and keep arrow facing down */
+}
