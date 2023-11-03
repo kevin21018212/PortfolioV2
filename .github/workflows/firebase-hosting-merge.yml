@@ -26,12 +26,13 @@ jobs:
           npm ci
           npm run build
 
-      - name: Set up Firebase Service Account
-        run: |
-          echo "$FIREBASE_SERVICE_ACCOUNT_JSON" | base64 -d > $HOME/firebase-service-account.json
-          export GOOGLE_APPLICATION_CREDENTIALS="$HOME/firebase-service-account.json"
-        env:
-          FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_67502 }}
+  - name: Set up Firebase Service Account
+  run: |
+    echo "$FIREBASE_SERVICE_ACCOUNT_JSON" | base64 -d > $HOME/firebase-service-account.json
+    export GOOGLE_APPLICATION_CREDENTIALS="$HOME/firebase-service-account.json"
+  env:
+    FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_67502 }}
+
 
       - name: Deploy to Firebase Hosting
         run: |
