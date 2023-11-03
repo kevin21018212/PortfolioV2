@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {animate, motion} from "framer-motion";
-import "../../css/projects/project.css";
+import '../../css/projects/project.css'
 import {projects} from "@/app/projectdata";
 import ProjectInfo from "./projectinfo";
 
