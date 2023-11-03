@@ -40,5 +40,7 @@ jobs:
         env:
           FIREBASE_DEPLOY_KEY: ${{ secrets.FIREBASE_DEPLOY_KEY }}
 
-      env:
-        FIREBASE_CLI_REFRESH_TOKEN: ${{ secrets.FIREBASE_CLI_REFRESH_TOKEN }}
+      - name: Set environment variables
+        run: |
+          echo "FIREBASE_CLI_REFRESH_TOKEN=${{ secrets.FIREBASE_CLI_REFRESH_TOKEN }}" >> $GITHUB_ENV
+
