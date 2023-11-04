@@ -1,9 +1,6 @@
-.projects-component{
+.projects-component {
   z-index: 50;
-  border:1px dotted blue;
   height: 10vh;
-
-
 }
 
 .projects-container {
@@ -13,23 +10,16 @@
   background-color: #0a0a0a;
 }
 
-
-
-
-
 /*This is the circles section*/
 .circles-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
- 
   width: 8%;
-  background: linear-gradient(to bottom, #FD2000, #DF007C);
-
+  background: linear-gradient(to bottom, #fd2000, #df007c);
   box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.2);
   overflow-y: hidden;
-  
 }
 
 .circle {
@@ -47,7 +37,6 @@
   background-color: #0a0a0a;
 }
 
-
 .spacer-container {
   height: 100%;
   width: 100vw;
@@ -56,8 +45,6 @@
   align-items: center;
   padding-left: 2.5%;
   padding-right: 7.5%;
-  
-
 }
 
 .spacer-container p {
@@ -65,9 +52,9 @@
   font-size: 4rem;
 }
 
-.texttitle{width: 80% ;}
-
-
+.texttitle {
+  width: 80%;
+}
 
 /* Styles for the button container */
 .toggle-button {
@@ -83,7 +70,7 @@
 /* Common styles for both up and down arrow */
 .toggle-button::before,
 .toggle-button::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 0;
@@ -95,7 +82,7 @@
 .toggle-button.up-arrow::before {
   border-bottom-color: #000; /* Change color as needed */
   top: 50%; /* Center vertically */
- 
+
   transform: translate(-50%, -50%) rotate(180deg); /* Center and rotate the arrow to face up */
 }
 
