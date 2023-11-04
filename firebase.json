@@ -1,7 +1,6 @@
 {
   "hosting": {
-    "public": "app",  // the directory where your Next.js app is built
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "public": "app", 
     "rewrites": [
       {
         "source": "**",
