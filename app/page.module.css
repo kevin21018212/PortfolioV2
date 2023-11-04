@@ -1,17 +1,24 @@
-.container {
-  display: flex;
-  flex-direction: column; 
+
+.maincontent{
   height: 100vh;
+
+  display: flex;
+  flex-direction: column;
 
 }
 
 
 .landingcontainer{
-  height: 90vh;
+  height: 90%;
+  width: 100%;
+
+  
 
 }
 .projectcontainer {
- height: 10vh;
+ height: 10%;
+ width: 100%;
+
 }
 
 

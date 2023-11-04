@@ -26,7 +26,10 @@ export default function Home() {
         <LoadingAnimation />
       ) : (
         <>
-          <div className={styles.main}>
+
+
+
+          <div className={styles.maincontent}>
            <div className={styles.landingcontainer}>
             <Landing />
             </div>
