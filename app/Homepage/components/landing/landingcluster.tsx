@@ -23,19 +23,39 @@ const LandingCluster = ({ amplitude }: any) => {
       </div>
       <div className="updates-box">
         <div className="updates-header">
-          <p className="texttitle">Updates</p>
+          <p className="textlarge">Updates</p>
         </div>
         <div className="updates-content">
-          <div className="grid-item">83577b6</div>
-          <div className="grid-item">PortfolioV2 --2 hours ago</div>
-          <div className="grid-item">7d84e2a</div>
-          <div className="grid-item">Kev vs Ian --6 days ago </div>
-          <div className="grid-item">a19f5c8</div>
-          <div className="grid-item">whatisKevBumpin --10 days ago</div>
-          <div className="grid-item">3b61d9e</div>
-          <div className="grid-item">PortfolioV2 --30 days ago</div>
-          <div className="grid-item">3b61d9e</div>
-          <div className="grid-item">PortfolioV2 --30 days ago</div>
+          <div className="grid-item">
+            <p>83577b6</p>
+          </div>
+          <div className="grid-item">
+            <p>PortfolioV2 --2 hours ago</p>
+          </div>
+          <div className="grid-item">
+            <p>7d84e2a</p>
+          </div>
+          <div className="grid-item">
+            <p>Kev vs Ian --6 days ago</p>{" "}
+          </div>
+          <div className="grid-item">
+            <p>a19f5c8</p>
+          </div>
+          <div className="grid-item">
+            <p>whatisKevBumpin --10 days ag</p>
+          </div>
+          <div className="grid-item">
+            <p>3b61d9e</p>
+          </div>
+          <div className="grid-item">
+            <p>PortfolioV2 --30 days ago</p>
+          </div>
+          <div className="grid-item">
+            <p>3b61d9e</p>
+          </div>
+          <div className="grid-item">
+            <p>PortfolioV2 --30 days ago</p>
+          </div>
         </div>
       </div>
       <div className="image-box"></div>
