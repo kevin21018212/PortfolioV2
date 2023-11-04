@@ -1,18 +1,10 @@
-.landing-content {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-   
-  }
-  .landing-title {
-    width: 100%;
-  }
-  .landing-title p{
-    
-    margin-bottom: -2%;
-  }
-  .landing-typewriter {
-    font-size: 5rem;
-    margin-left: 5%;
-  }
+.landing-title {
+  width: 100%;
+}
+.landing-title p {
+  margin-bottom: -2%;
+}
+.landing-typewriter {
+  font-size: 5rem;
+  margin-left: 5%;
+}
