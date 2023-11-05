@@ -12,7 +12,7 @@ const LandingCluster = ({ amplitude }: any) => {
         className="wave-box"
       >
         <div className="wave-text">
-          <p>This week: {amplitude}</p>
+          <p className="m">Weekly Updates: {amplitude}</p>
         </div>
         <div className="wave">
           <Wave
@@ -35,38 +35,38 @@ const LandingCluster = ({ amplitude }: any) => {
         className="updates-box"
       >
         <div className="updates-header">
-          <p className="textlarge">Updates</p>
+          <p className="t5">Updates</p>
         </div>
         <div className="updates-content">
           <div className="grid-item">
-            <p>83577b6</p>
+            <p className="s">83577b6</p>
           </div>
           <div className="grid-item">
-            <p>PortfolioV2 --2 hours ago</p>
+            <p className="xs">PortfolioV2 --2 hours ago</p>
           </div>
           <div className="grid-item">
-            <p>7d84e2a</p>
+            <p className="s">7d84e2a</p>
           </div>
           <div className="grid-item">
-            <p>Kev vs Ian --6 days ago</p>{" "}
+            <p className="xs">Kev vs Ian --6 days ago</p>{" "}
           </div>
           <div className="grid-item">
-            <p>a19f5c8</p>
+            <p className="s">a19f5c8</p>
           </div>
           <div className="grid-item">
-            <p>whatisKevBumpin --10 days ag</p>
+            <p className="xs">whatisKevBumpin --10 days ag</p>
           </div>
           <div className="grid-item">
-            <p>3b61d9e</p>
+            <p className="s"> 3b61d9e</p>
           </div>
           <div className="grid-item">
-            <p>PortfolioV2 --30 days ago</p>
+            <p className="xs">PortfolioV2 --30 days ago</p>
           </div>
           <div className="grid-item">
-            <p>3b61d9e</p>
+            <p className="s">3b61d9e</p>
           </div>
           <div className="grid-item">
-            <p>PortfolioV2 --30 days ago</p>
+            <p className="xs">PortfolioV2 --30 days ago</p>
           </div>
         </div>
       </motion.div>

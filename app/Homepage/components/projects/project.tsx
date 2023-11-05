@@ -49,7 +49,7 @@ const Project = () => {
   return (
     <div className="projects-component">
       <div className="spacer-container">
-        <p className="texttitle">New Projects</p>
+        <p className="t1">New Projects</p>
         <button
           onClick={handleToggleProject}
           className={`toggle-button ${

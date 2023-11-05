@@ -39,21 +39,18 @@
 
 .spacer-container {
   height: 100%;
-  width: 100vw;
   background-color: whitesmoke;
   display: flex;
   align-items: center;
   padding-left: 2.5%;
-  padding-right: 7.5%;
 }
 
+.t1 {
+  padding-top: 1%;
+  width: 100%;
+}
 .spacer-container p {
   color: black;
-  font-size: 4rem;
-}
-
-.texttitle {
-  width: 80%;
 }
 
 /* Styles for the button container */
