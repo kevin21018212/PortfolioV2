@@ -1,10 +1,16 @@
 import Wave from "react-wavify";
 import "../../css/landing/landingcluster.css";
-
+import { motion } from "framer-motion";
 const LandingCluster = ({ amplitude }: any) => {
   return (
     <div className="landing-cluster">
-      <div className="wave-box">
+      <motion.div
+        initial={{ opacity: 0, x: "-5vw" }}
+        animate={{ opacity: 1, x: "0" }}
+        exit={{ opacity: 0, x: "-5vw" }}
+        transition={{ delay: 0.05 }}
+        className="wave-box"
+      >
         <div className="wave-text">
           <p>This week: {amplitude}</p>
         </div>
@@ -20,8 +26,14 @@ const LandingCluster = ({ amplitude }: any) => {
             }}
           />
         </div>
-      </div>
-      <div className="updates-box">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: "5vw" }}
+        animate={{ opacity: 1, x: "0" }}
+        exit={{ opacity: 0, x: "5vw" }}
+        transition={{ delay: 0.1 }}
+        className="updates-box"
+      >
         <div className="updates-header">
           <p className="textlarge">Updates</p>
         </div>
@@ -57,8 +69,14 @@ const LandingCluster = ({ amplitude }: any) => {
             <p>PortfolioV2 --30 days ago</p>
           </div>
         </div>
-      </div>
-      <div className="image-box"></div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0 }}
+        whileHover={{ scale: 1.1 }}
+        className="image-box"
+      ></motion.div>
     </div>
   );
 };

@@ -1,22 +1,33 @@
 import { TypeAnimation } from "react-type-animation";
 import "../../css/landing/landingtext.css";
+import { motion } from "framer-motion";
 
 const LandingText = () => {
   return (
-    <div>
-      <div className="landing-title">
+    <div className="landing-text">
+      <motion.div
+        initial={{ opacity: 0, x: "-5vw" }}
+        animate={{ opacity: 1, x: "0" }}
+        exit={{ opacity: 0, x: "-5vw" }}
+        className="landing-title"
+      >
         <p>Hi, I'm Matthew</p>
-      </div>
-      <div className="landing-typewriter">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: "-5vw" }}
+        animate={{ opacity: 1, x: "0" }}
+        exit={{ opacity: 0, x: "-5vw" }}
+        transition={{ delay: 0.25 }}
+        className="landing-typewriter"
+      >
         <div className="texttitle">
           <TypeAnimation
             sequence={["Developer", 3000, "Programmer", 3000, "Designer", 3000]}
-            wrapper="span"
             speed={10}
             repeat={Infinity}
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
