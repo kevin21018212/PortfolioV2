@@ -11,7 +11,7 @@ const LandingText = () => {
         exit={{ opacity: 0, x: "-5vw" }}
         className="landing-title"
       >
-        <p>Hi, I'm Matthew</p>
+        <p className="t4">Hi, I'm Matthew</p>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, x: "-5vw" }}
@@ -20,7 +20,7 @@ const LandingText = () => {
         transition={{ delay: 0.25 }}
         className="landing-typewriter"
       >
-        <div className="texttitle">
+        <div className="t1">
           <TypeAnimation
             sequence={["Developer", 3000, "Programmer", 3000, "Designer", 3000]}
             speed={10}
