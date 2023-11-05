@@ -1,7 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import "../../css/landing/landingtext.css";
-import { motion, animate, useAnimate, stagger } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const LandingText = () => {
   return (
