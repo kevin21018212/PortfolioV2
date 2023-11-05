@@ -1,6 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import "../../css/landing/landingtext.css";
-import { motion, animate } from "framer-motion";
+import { motion, animate, useAnimate, stagger } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const LandingText = () => {
@@ -18,6 +18,7 @@ const LandingText = () => {
         initial={{ opacity: 0, x: "-5vw" }}
         animate={{ opacity: 1, x: "0" }}
         exit={{ opacity: 0, x: "-5vw" }}
+        transition={{ delay: 0.25 }}
         className="landing-typewriter"
       >
         <div className="texttitle">
