@@ -20,10 +20,6 @@ const textanimation = {
   active: {
     opacity: 1,
     translateX: "0vh", // Change to 0vh for left, 5vh for middle
-    transition: {
-      delayChildren: 0.5,
-      staggerChildren: 0.2, // Adjust the stagger delay as needed.
-    },
   },
 };
 
@@ -58,13 +54,16 @@ const ProjectInfo = ({ projectData }: { projectData: ProjectData }) => {
             exit="inactive"
             className="projects-content-left"
           >
-            <motion.p className={`textsmall`} variants={textanimation}>
+            <motion.p className={" textsmall"} variants={textanimation}>
               {projectData.topRight}
             </motion.p>
-            <motion.p className={`textlarge`} variants={textanimation}>
+            <motion.div
+              className={`middleleft texttitle`}
+              variants={textanimation}
+            >
               {projectData.middleRight}
-            </motion.p>
-            <motion.p variants={textanimation}>
+            </motion.div>
+            <motion.p className={"bottom textmedium"} variants={textanimation}>
               {projectData.bottomRight}
             </motion.p>
           </motion.div>
@@ -75,11 +74,16 @@ const ProjectInfo = ({ projectData }: { projectData: ProjectData }) => {
             exit="inactive"
             className="projects-content-middle"
           >
-            <p>Idea</p>
-            <motion.p variants={textanimation}>
-              {projectData.middleMiddle}
-            </motion.p>
-            <motion.p variants={textanimation}>
+            <motion.div className=" idea" variants={textanimation}>
+              <motion.p className="textlarge ideatop">Idea</motion.p>
+              <motion.p className="textmedium ideabody">
+                {projectData.middleMiddle}
+              </motion.p>
+            </motion.div>
+            <motion.p
+              className={"bottommiddle textmedium"}
+              variants={textanimation}
+            >
               {projectData.bottomMiddle}
             </motion.p>
           </motion.div>
