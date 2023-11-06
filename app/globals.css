@@ -55,7 +55,7 @@
 
 .xs {
   font-family: "Petrov-Thin", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: white;
 }
 .s {
@@ -66,7 +66,7 @@
 
 .m {
   font-family: "Petrov", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   color: white;
 }
 
@@ -84,7 +84,7 @@
 }
 
 .t2 {
-  font-family: "Byotone", sans-serif;
+  font-family: "Genesys", sans-serif;
   font-size: 4rem;
   color: white;
   margin: 0;
