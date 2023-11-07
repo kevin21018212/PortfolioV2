@@ -1,44 +1,39 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import styles from "../css/skillslider.module.css";
 import SkillCard from "./skillcard";
 import skillsData from "@/app/skilldata";
+import { motion, useMotionValue } from "framer-motion";
 
 const SkillSlider = () => {
-  const skillsPerPage = 5;
-  const [currentPage, setCurrentPage] = useState(0);
-  const totalPages = Math.ceil(skillsData.length / skillsPerPage);
-
-  const handleNext = () => {
-    setCurrentPage((prevPage) => (prevPage + 1) % totalPages);
-  };
-
-  const handlePrev = () => {
-    setCurrentPage((prevPage) => (prevPage - 1 + totalPages) % totalPages);
-  };
-
-  const startIndex = currentPage * skillsPerPage;
-  const endIndex = startIndex + skillsPerPage;
-  const visibleSkills = skillsData.slice(startIndex, endIndex);
+  const numSkills = skillsData.length;
+  const initialX = -(numSkills / 2) * 25; // Center the carousel
+  const x = useMotionValue(initialX);
 
   return (
-    <div className={styles.skillsliderContainer}>
-      <div className={styles.carousel}>
-        {visibleSkills.map((skill: any, index: number) => (
-          <SkillCard
-            key={index}
-            title={skill.title}
-            skillName={skill.skillName}
-            experience={skill.experience}
-            backgroundImageUrl={skill.backgroundImageUrl}
-          />
+    <motion.div className={styles.skillsliderContainer}>
+      <motion.ul
+        drag={"x"}
+        dragConstraints={{
+          left: -60 * numSkills,
+          right: 60 * numSkills,
+        }}
+        style={{ x }} // Set the x value here
+        className={styles.carousel}
+      >
+        {skillsData.map((skill: any, index: number) => (
+          <li key={index} className={styles.skillcardContainer}>
+            <SkillCard
+              title={skill.title}
+              skillName={skill.skillName}
+              experience={skill.experience}
+              backgroundImageUrl={skill.backgroundImageUrl}
+            />
+          </li>
         ))}
-      </div>
-      <div className={styles.navigation}>
-        <button onClick={handlePrev}>&lt;</button>
-        <button onClick={handleNext}>&gt;</button>
-      </div>
-    </div>
+      </motion.ul>
+      <div className={styles.navigation}></div>
+    </motion.div>
   );
 };
 
