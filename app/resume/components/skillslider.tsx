@@ -10,28 +10,22 @@ const SkillSlider = () => {
   const initialX = -(numSkills / 2) * 25; // Center the carousel
   const x = useMotionValue(initialX);
 
+  const ref = useRef(null);
+
   return (
-    <motion.div className={styles.skillsliderContainer}>
-      <motion.ul
-        drag={"x"}
-        dragConstraints={{
-          left: -60 * numSkills,
-          right: 60 * numSkills,
-        }}
-        style={{ x }} // Set the x value here
-        className={styles.carousel}
-      >
+    <motion.div ref={ref} className={styles.skillsliderContainer}>
+      <motion.div drag={"x"} dragConstraints={ref} className={styles.carousel}>
         {skillsData.map((skill: any, index: number) => (
-          <li key={index} className={styles.skillcardContainer}>
+          <motion.div key={index} className={styles.skillcardContainer}>
             <SkillCard
               title={skill.title}
               skillName={skill.skillName}
               experience={skill.experience}
               backgroundImageUrl={skill.backgroundImageUrl}
             />
-          </li>
+          </motion.div>
         ))}
-      </motion.ul>
+      </motion.div>
       <div className={styles.navigation}></div>
     </motion.div>
   );
