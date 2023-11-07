@@ -1,44 +1,33 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import styles from "../css/skillslider.module.css";
 import SkillCard from "./skillcard";
 import skillsData from "@/app/skilldata";
+import { motion, useMotionValue } from "framer-motion";
 
 const SkillSlider = () => {
-  const skillsPerPage = 5;
-  const [currentPage, setCurrentPage] = useState(0);
-  const totalPages = Math.ceil(skillsData.length / skillsPerPage);
+  const numSkills = skillsData.length;
+  const initialX = -(numSkills / 2) * 25; // Center the carousel
+  const x = useMotionValue(initialX);
 
-  const handleNext = () => {
-    setCurrentPage((prevPage) => (prevPage + 1) % totalPages);
-  };
-
-  const handlePrev = () => {
-    setCurrentPage((prevPage) => (prevPage - 1 + totalPages) % totalPages);
-  };
-
-  const startIndex = currentPage * skillsPerPage;
-  const endIndex = startIndex + skillsPerPage;
-  const visibleSkills = skillsData.slice(startIndex, endIndex);
+  const ref = useRef(null);
 
   return (
-    <div className={styles.skillsliderContainer}>
-      <div className={styles.carousel}>
-        {visibleSkills.map((skill: any, index: number) => (
-          <SkillCard
-            key={index}
-            title={skill.title}
-            skillName={skill.skillName}
-            experience={skill.experience}
-            backgroundImageUrl={skill.backgroundImageUrl}
-          />
+    <motion.div ref={ref} className={styles.skillsliderContainer}>
+      <motion.div drag={"x"} dragConstraints={ref} className={styles.carousel}>
+        {skillsData.map((skill: any, index: number) => (
+          <motion.div key={index} className={styles.skillcardContainer}>
+            <SkillCard
+              title={skill.title}
+              skillName={skill.skillName}
+              experience={skill.experience}
+              backgroundImageUrl={skill.backgroundImageUrl}
+            />
+          </motion.div>
         ))}
-      </div>
-      <div className={styles.navigation}>
-        <button onClick={handlePrev}>&lt;</button>
-        <button onClick={handleNext}>&gt;</button>
-      </div>
-    </div>
+      </motion.div>
+      <div className={styles.navigation}></div>
+    </motion.div>
   );
 };
 
