@@ -53,6 +53,7 @@
   margin-bottom: 10%;
 }
 
+/* Define default font sizes */
 .xs {
   font-family: "Petrov-Thin", sans-serif;
   font-size: 0.9rem;
@@ -63,26 +64,22 @@
   font-size: 1rem;
   color: white;
 }
-
 .m {
   font-family: "Petrov", sans-serif;
   font-size: 1.8rem;
   color: white;
 }
-
 .l {
   font-family: "Genesys", sans-serif;
   font-size: 2rem;
   color: white;
 }
-
 .t1 {
   font-family: "Genesys", sans-serif;
   font-size: 5rem;
   color: white;
   margin: 0;
 }
-
 .t2 {
   font-family: "Genesys", sans-serif;
   font-size: 4rem;
@@ -95,7 +92,6 @@
   color: white;
   margin: 0;
 }
-
 .t4 {
   font-family: "Petrov", sans-serif;
   font-size: 2rem;
@@ -108,16 +104,51 @@
   color: white;
   margin: 0;
 }
-
 .lnk {
   font-family: "Byotone", sans-serif;
   font-size: 1.1rem;
 }
-
 p {
   font-family: "Byotone ", sans-serif;
   font-size: 1.1rem;
   color: white;
+}
+
+/* Use media queries to change font sizes based on screen width */
+@media screen and (max-width: 600px) {
+  .xs {
+    font-size: 0.8rem;
+  }
+  .s {
+    font-size: 0.9rem;
+  }
+  .m {
+    font-size: 1.5rem;
+  }
+  .l {
+    font-size: 1.8rem;
+  }
+  .t1 {
+    font-size: 3rem;
+  }
+  .t2 {
+    font-size: 2rem;
+  }
+  .t3 {
+    font-size: 1.8rem;
+  }
+  .t4 {
+    font-size: 1.5rem;
+  }
+  .t5 {
+    font-size: 1.2rem;
+  }
+  .lnk {
+    font-size: 0.9rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
 }
 
 body {
