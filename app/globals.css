@@ -1,5 +1,3 @@
-/* styles/fonts.css */
-
 @font-face {
   font-family: "Sequel-Black";
   src: url("../public/fonts/Sequel100Black-75.ttf") format("truetype");
@@ -39,12 +37,6 @@
 @font-face {
   font-family: "Petrov-Thin";
   src: url("../public/fonts/PetrovSans-Thin.ttf") format("truetype");
-}
-
-:root {
-  --primary-color: #f0f0f0;
-  --secondary-color: #fc4444;
-  --background-color: #0a0a0a;
 }
 
 .line {

@@ -1,9 +1,5 @@
-// components/Landing.js
-"use client";
 import React, { useEffect, useState } from "react";
-
-import "../../css/landing/landing.css";
-
+import styles from "../../css/landing/landing.module.css";
 import LandingText from "./landingtext";
 import LandingCluster from "./landingcluster";
 
@@ -47,14 +43,15 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className="landing-container">
-      <div className="text-container">
+    <div className={styles.landingContainer}>
+      <div className={styles.textContainer}>
         <LandingText />
       </div>
-      <div className="cluster-container">
+      <div className={styles.clusterContainer}>
         <LandingCluster amplitude={amplitude} />
       </div>
     </div>
   );
 };
+
 export default Landing;

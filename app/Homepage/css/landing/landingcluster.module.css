@@ -1,4 +1,6 @@
-.landing-cluster {
+/* css/landing/LandingCluster.module.css */
+
+.landingCluster {
   height: 60vh;
   z-index: 0;
   display: grid;
@@ -8,7 +10,7 @@
   margin-right: 10%;
 }
 
-.wave-box {
+.waveBox {
   height: 15vh;
   z-index: 0;
   margin-left: -15%;
@@ -21,7 +23,7 @@
   outline: 1px solid var(--primary-color);
 }
 
-.wave-text {
+.waveText {
   height: 4vh;
   display: flex;
   align-items: center;
@@ -29,7 +31,7 @@
   outline: 1px solid var(--primary-color);
 }
 
-.updates-box {
+.updatesBox {
   border-radius: 25px;
   grid-row: span 2;
   grid-column: span 2;
@@ -46,7 +48,7 @@
     0px 0px 1px 1px rgba(9, 30, 66, 0.13);
 }
 
-.updates-header {
+.updatesHeader {
   height: 22%;
   display: flex;
   align-items: center;
@@ -54,14 +56,14 @@
   padding-top: 1%;
 }
 
-.updates-content {
+.updatesContent {
   height: 77%;
   display: grid;
   grid-template-columns: 25% 75%;
   grid-template-rows: repeat(5, 1fr);
 }
 
-.grid-item {
+.gridItem {
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -71,7 +73,7 @@
   border: 0.8px solid var(--primary-color);
 }
 
-.image-box {
+.imageBox {
   background-image: url("../../../../public/me.png");
   background-size: cover;
   grid-row: 2 / span 4;

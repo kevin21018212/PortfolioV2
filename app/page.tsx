@@ -1,7 +1,7 @@
 "use client";
+import Landing from "./homepage/components/landing/landing";
+import Project from "./homepage/components/projects/project";
 import styles from "./page.module.css";
-import Landing from "./Homepage/components/landing/landing";
-import Project from "./Homepage/components/projects/project";
 
 export default function Home() {
   return (

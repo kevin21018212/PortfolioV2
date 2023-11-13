@@ -1,15 +1,16 @@
+import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import "../../css/landing/landingtext.css";
+import styles from "../../css/landing/landingtext.module.css";
 import { motion } from "framer-motion";
 
 const LandingText = () => {
   return (
-    <div className="landing-text">
+    <div className={styles.landingText}>
       <motion.div
         initial={{ opacity: 0, x: "-5vw" }}
         animate={{ opacity: 1, x: "0" }}
         exit={{ opacity: 0, x: "-5vw" }}
-        className="landing-title"
+        className={styles.landingTitle}
       >
         <p className="t4">Hi, I'm Matthew</p>
       </motion.div>
@@ -18,7 +19,7 @@ const LandingText = () => {
         animate={{ opacity: 1, x: "0" }}
         exit={{ opacity: 0, x: "-5vw" }}
         transition={{ delay: 0.25 }}
-        className="landing-typewriter"
+        className={styles.landingTypewriter}
       >
         <div className="t1">
           <TypeAnimation
