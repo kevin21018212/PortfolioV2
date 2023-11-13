@@ -4,31 +4,13 @@
   width: 100%;
 }
 
-/* For screens with a maximum width of 600px (adjust the value as needed) */
-@media screen and (max-width: 600px) {
-  .projects-content-right {
-    display: 1;
-  }
-  .t1 {
-    font-size: 2rem;
-  }
-  .m {
-    font-size: 1rem;
-  }
-  .t3 {
-    font-size: 1.5rem;
-  }
-  .idea {
-    width: 75%;
-  }
-}
-
+/*Image for project*/
 .project-image {
-  flex-grow: 1;
   margin: 1%;
   border: 1px solid white;
 }
 
+/*3 sections of project info*/
 .projects-content-left {
   flex-direction: column;
   flex-grow: 1;
@@ -48,6 +30,7 @@
   flex-grow: 1;
 }
 
+/*Sections of the projects info*/
 .middleleft {
   margin-top: 20vh;
 }
@@ -69,4 +52,23 @@
 
 .bottommiddle {
   margin-top: 12vh;
+}
+
+/*Sizing For Iphone*/
+@media screen and (max-width: 600px) {
+  .projects-content-right {
+    display: 1;
+  }
+  .t1 {
+    font-size: 2rem;
+  }
+  .m {
+    font-size: 1rem;
+  }
+  .t3 {
+    font-size: 1.5rem;
+  }
+  .idea {
+    width: 75%;
+  }
 }

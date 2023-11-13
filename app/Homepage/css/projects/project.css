@@ -3,6 +3,7 @@
   height: 10vh;
 }
 
+/*Code for projects info container*/
 .projects-container {
   display: flex;
   height: 0vh;
@@ -11,6 +12,7 @@
   border: 1px dotted red;
 }
 
+/*Code Circle and Circle Container*/
 .circles-container {
   display: flex;
   flex-direction: column;
@@ -37,6 +39,7 @@
   background-color: #0a0a0a;
 }
 
+/*Code for the New Projects Spacer*/
 .spacer-container {
   height: 100%;
   background-color: whitesmoke;
@@ -45,15 +48,16 @@
   padding-left: 2.5%;
 }
 
-.t1 {
-  padding-top: 1%;
-  width: 100%;
-}
 .spacer-container p {
   color: black;
 }
 
-/* Styles for the button container */
+.t1 {
+  padding-top: 1%;
+  width: 100%;
+}
+
+/*Code for the toggle button*/
 .toggle-button {
   background: transparent;
   border: none;
@@ -64,7 +68,6 @@
   transition: transform 0.5s;
 }
 
-/* Common styles for both up and down arrow */
 .toggle-button::before,
 .toggle-button::after {
   content: "";
@@ -75,18 +78,16 @@
   transition: transform 0.5s;
 }
 
-/* Styles for the up arrow */
 .toggle-button.up-arrow::before {
-  border-bottom-color: #000; /* Change color as needed */
+  border-bottom-color: #000;
   top: 50%; /* Center vertically */
 
-  transform: translate(-50%, -50%) rotate(180deg); /* Center and rotate the arrow to face up */
+  transform: translate(-50%, -50%) rotate(180deg);
 }
 
-/* Styles for the down arrow */
 .toggle-button.down-arrow::before {
-  border-bottom-color: #000; /* Change color as needed */
+  border-bottom-color: #000;
   top: 50%; /* Center vertically */
 
-  transform: translate(-50%, -50%) rotate(0deg); /* Center and keep arrow facing down */
+  transform: translate(-50%, -50%) rotate(0deg);
 }
