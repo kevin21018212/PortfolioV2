@@ -1,0 +1,28 @@
+.workcomponent {
+  max-height: 110vh;
+  min-height: 10vh;
+  width: 100%;
+}
+.workcontainer {
+  height: 0vh;
+  opacity: 0;
+}
+
+.workimg {
+  height: 100%;
+  width: 40%;
+  background: green;
+}
+.workbox {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.workdisplay {
+  width: 50%;
+  height: 40%;
+  margin-left: -5%;
+  background-color: blue;
+}
