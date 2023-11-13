@@ -1,24 +1,25 @@
-.projects-content {
+/* Main Container */
+.projectsContent {
   display: flex;
   margin: 1%;
   width: 100%;
 }
 
-/*Image for project*/
-.project-image {
+/* Image for Project */
+.projectImage {
   margin: 1%;
   border: 1px solid white;
 }
 
-/*3 sections of project info*/
-.projects-content-left {
+/* Three Sections of Project Info */
+.projectsContentLeft {
   flex-direction: column;
   flex-grow: 1;
   display: flex;
   align-items: flex-start;
 }
 
-.projects-content-middle {
+.projectsContentMiddle {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -26,15 +27,16 @@
   text-align: right;
 }
 
-.projects-content-right {
+.projectsContentRight {
   flex-grow: 1;
 }
 
-/*Sections of the projects info*/
-.middleleft {
+/* Sections of the Projects Info */
+.middleLeft {
   margin-top: 20vh;
 }
-.bottomleft {
+
+.bottomLeft {
   margin-top: 12vh;
 }
 
@@ -45,18 +47,19 @@
   overflow: hidden;
 }
 
-.ideabody {
-  text-wrap: pretty;
+.ideaBody {
+  /* Consider changing 'text-wrap' to 'white-space' */
+  white-space: pre-wrap;
   text-overflow: ellipsis;
 }
 
-.bottommiddle {
+.bottomMiddle {
   margin-top: 12vh;
 }
 
-/*Sizing For Iphone*/
+/* Sizing for iPhone */
 @media screen and (max-width: 600px) {
-  .projects-content-right {
+  .projectsContentRight {
     display: 1;
   }
   .t1 {

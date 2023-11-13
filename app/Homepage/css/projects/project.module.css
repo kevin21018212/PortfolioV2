@@ -1,10 +1,11 @@
-.projects-component {
+/* Projects Component */
+.projectsComponent {
   z-index: 50;
   height: 10vh;
 }
 
-/*Code for projects info container*/
-.projects-container {
+/* Projects Info Container */
+.projectsContainer {
   display: flex;
   height: 0vh;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
@@ -12,8 +13,8 @@
   border: 1px dotted red;
 }
 
-/*Code Circle and Circle Container*/
-.circles-container {
+/* Circle and Circle Container */
+.circlesContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,8 +40,8 @@
   background-color: #0a0a0a;
 }
 
-/*Code for the New Projects Spacer*/
-.spacer-container {
+/* New Projects Spacer */
+.spacerContainer {
   height: 100%;
   background-color: whitesmoke;
   display: flex;
@@ -48,7 +49,7 @@
   padding-left: 2.5%;
 }
 
-.spacer-container p {
+.spacerContainer p {
   color: black;
 }
 
@@ -57,8 +58,8 @@
   width: 100%;
 }
 
-/*Code for the toggle button*/
-.toggle-button {
+/* Toggle Button */
+.toggleButton {
   background: transparent;
   border: none;
   cursor: pointer;
@@ -68,8 +69,8 @@
   transition: transform 0.5s;
 }
 
-.toggle-button::before,
-.toggle-button::after {
+.toggleButton::before,
+.toggleButton::after {
   content: "";
   position: absolute;
   width: 0;
@@ -78,16 +79,14 @@
   transition: transform 0.5s;
 }
 
-.toggle-button.up-arrow::before {
+.toggleButton.upArrow::before {
   border-bottom-color: #000;
-  top: 50%; /* Center vertically */
-
+  top: 50%;
   transform: translate(-50%, -50%) rotate(180deg);
 }
 
-.toggle-button.down-arrow::before {
+.toggleButton.downArrow::before {
   border-bottom-color: #000;
-  top: 50%; /* Center vertically */
-
+  top: 50%;
   transform: translate(-50%, -50%) rotate(0deg);
 }
