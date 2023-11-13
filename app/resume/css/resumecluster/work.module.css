@@ -1,28 +1,39 @@
-.workcomponent {
-  max-height: 110vh;
-  min-height: 10vh;
-  width: 100%;
-}
 .workcontainer {
-  height: 0vh;
-  opacity: 0;
+  height: 150vh;
+  display: flex;
+  padding-bottom: 30%;
 }
 
 .workimg {
   height: 100%;
   width: 40%;
-  background: green;
+  background: url(../../../../public/deereimg.jpeg);
+  background-size: cover;
+  background-position: left;
+  display: flex;
+  flex-direction: column-reverse;
 }
+.worktext {
+  height: 8%;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+}
+.worktext p {
+  color: black;
+}
+
 .workbox {
   height: 100%;
-  width: 80%;
+  width: 70%;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 .workdisplay {
-  width: 50%;
+  width: 60%;
   height: 40%;
-  margin-left: -5%;
+  margin-left: -10%;
   background-color: blue;
 }

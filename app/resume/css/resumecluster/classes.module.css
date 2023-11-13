@@ -1,9 +1,4 @@
-.classescomponent {
-  max-height: 60vh;
-  min-height: 10vh;
-  width: 100%;
-}
 .classescontainer {
-  height: 0vh;
-  opacity: 0;
+  height: 100vh;
+  background: whitesmoke;
 }

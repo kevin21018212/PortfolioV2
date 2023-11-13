@@ -1,5 +1,4 @@
 .clustercontainer {
-  min-height: 30vh;
-  display: flex;
-  flex-direction: column;
+  height: 200vh;
+  margin-top: 5%;
 }
