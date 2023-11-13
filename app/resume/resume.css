@@ -1,3 +1,7 @@
 .resumeContainer {
   height: 200vh;
+  background-image: url("../../public/backgroundtest.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
