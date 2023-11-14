@@ -1,0 +1,47 @@
+.spacercontainer {
+  height: 10vh;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  padding-left: 2.5%;
+}
+.spacercontainer p {
+  color: black;
+}
+
+.spacertext {
+  width: 85%;
+}
+
+/* Toggle Button */
+.toggleButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  width: 15%; /* Full width */
+  height: 100%; /* Full height */
+  transition: transform 0.5s;
+}
+
+.toggleButton::before,
+.toggleButton::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  transition: transform 0.5s;
+}
+
+.toggleButton.upArrow::before {
+  border-bottom-color: #000;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.toggleButton.downArrow::before {
+  border-bottom-color: #000;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+}

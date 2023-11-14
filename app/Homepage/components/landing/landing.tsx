@@ -1,9 +1,10 @@
+
 "use client";
 import React, { useEffect, useState } from "react";
-
-import "../../css/landing/landing.css";
-import LandingCluster from "./landingcluster";
+import styles from "../../css/landing/landing.module.css";
 import LandingText from "./landingtext";
+import LandingCluster from "./landingcluster";
+
 
 const Landing = () => {
   const [amplitude, setAmplitude] = useState(0);
@@ -45,10 +46,15 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className="landing-container">
-      <LandingText />
-      <LandingCluster amplitude={amplitude} />
+    <div className={styles.landingContainer}>
+      <div className={styles.textContainer}>
+        <LandingText />
+      </div>
+      <div className={styles.clusterContainer}>
+        <LandingCluster amplitude={amplitude} />
+      </div>
     </div>
   );
 };
+
 export default Landing;

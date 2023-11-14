@@ -1,20 +1,15 @@
-import React, {useState, useEffect} from "react";
-import {animate, motion} from "framer-motion";
-import '../../css/projects/project.css'
-import {projects} from "@/app/projectdata";
+import React, { useState, useEffect } from "react";
+import { animate, motion } from "framer-motion";
+import styles from "../../css/projects/project.module.css";
+import { projects } from "@/app/projectdata";
 import ProjectInfo from "./projectinfo";
 
-interface circles {
-  id: string;
-  info: string;
-}
-
 const circles = [
-  {id: "circle1", info: "Information for Circle 1"},
-  {id: "circle2", info: "Information for Circle 2"},
-  {id: "circle3", info: "Information for Circle 3"},
-  {id: "circle4", info: "Information for Circle 4"},
-  {id: "circle5", info: "Information for Circle 5"},
+  { id: "circle1", info: "Information for Circle 1" },
+  { id: "circle2", info: "Information for Circle 2" },
+  { id: "circle3", info: "Information for Circle 3" },
+  { id: "circle4", info: "Information for Circle 4" },
+  { id: "circle5", info: "Information for Circle 5" },
 ];
 
 const Project = () => {
@@ -31,31 +26,47 @@ const Project = () => {
     }
     setIsProjectOpen(!isProjectOpen);
   };
+
   const handleCircleClick = (circleId: string) => {
     const selectedProject = projects.find((project) => project.id === circleId);
-
     setProjectData(selectedProject || null);
   };
 
   const handleOpen = () => {
-    animate(".projects-container", {height: "65vh", opacity: 1});
-    animate(".projects-component", {transform: "translateY(-65vh)"});
+    animate(`.${styles.projectsContainer}`, { height: "65vh", opacity: 1 });
+    animate(`.${styles.projectsComponent}`, {
+      transform: "translateY(-65vh)",
+    });
   };
+
   const handleClose = () => {
-    animate(".projects-container", {height: "0vh", opacity: 1});
-    animate(".projects-component", {transform: "translateY(0vh)"});
+    animate(`.${styles.projectsContainer}`, { height: "0vh", opacity: 0 });
+    animate(`.${styles.projectsComponent}`, { transform: "translateY(0vh)" });
   };
 
   return (
-    <div className='projects-component'>
-     <div className='spacer-container'>
-      <p className='texttitle'>New Projects</p>
-      <button onClick={handleToggleProject} className={`toggle-button ${isProjectOpen ? 'up-arrow' : 'down-arrow'}`}></button>
-    </div>
-      <motion.div className='projects-container'>
-        <div className='circles-container'>
+    <div className={styles.projectsComponent}>
+      <div className={styles.spacerContainer}>
+        <p className="t1">New Projects</p>
+        <button
+          onClick={handleToggleProject}
+          className={`${styles.toggleButton} ${
+            isProjectOpen ? styles.upArrow : styles.downArrow
+          }`}
+        ></button>
+      </div>
+      <motion.div className={styles.projectsContainer}>
+        <div className={styles.circlesContainer}>
           {circles.map((circle) => (
-            <div key={circle.id} className={`circle ${selectedCircle === circle.id ? "selected" : ""}`} id={circle.id} onClick={() => handleCircleClick(circle.id)}></div>
+            <motion.div
+              whileHover={{ scale: 1.2 }}
+              key={circle.id}
+              className={`${styles.circle} ${
+                selectedCircle === circle.id ? styles.selected : ""
+              }`}
+              id={circle.id}
+              onClick={() => handleCircleClick(circle.id)}
+            ></motion.div>
           ))}
         </div>
         <ProjectInfo projectData={projectData} />

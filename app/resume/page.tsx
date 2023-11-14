@@ -1,27 +1,16 @@
-import SkillCard from "../Homepage/components/skillcard";
-import Spacer from "../Global/spacer";
-import './resume.css'
-
+"use client";
+import ResumeCluster from "./components/resumecluster";
+import ResumeHeader from "./components/resumeheader";
+import SkillSlider from "./components/skillslider";
+import "./resume.css";
 
 const ResumePage = () => {
-
-
-  
-
-    return (
-    
-      <>
-        <Spacer title="Skills" /><div className="skills-section">
-       <><SkillCard /><SkillCard /><SkillCard /><SkillCard /><SkillCard /></>
-        </div>
-        <Spacer title="Experience" />
-        <div className="experince-section"></div>
-        <Spacer title="Classes" />
-        <div className="classes"></div>
-        <Spacer title="Extra" />
-        <div className="extracricular"></div>
-      </>
-     
-    )
-}
+  return (
+    <div className="resumeContainer">
+      <ResumeHeader />
+      <SkillSlider />
+      <ResumeCluster />
+    </div>
+  );
+};
 export default ResumePage;
