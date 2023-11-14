@@ -37,8 +37,14 @@ const ResumeWork = () => {
             </div>
           </div>
           <div className={styles.aboutdisplay}>
-            <div className={styles.abouttext}>text</div>
-            <div className={styles.aboutimg}>img</div>
+            <div className={styles.abouttext}>
+              <p className="t4">Extra</p>
+              <p>Outdoor Rec</p>
+              <p>Traveling</p>
+              <p>Fashion</p>
+              <p>Art</p>
+            </div>
+            <div className={styles.aboutimg}></div>
           </div>
         </div>
       </div>

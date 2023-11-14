@@ -57,7 +57,7 @@ const ProjectInfo = ({ projectData }: { projectData: ProjectData }) => {
               {projectData.topRight}
             </motion.p>
             <motion.div
-              className={` "t1" ${styles.middleLeft} `}
+              className={`${styles.middleLeft} `}
               variants={textanimation}
             >
               {projectData.middleRight}

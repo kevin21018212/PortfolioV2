@@ -5,7 +5,7 @@
 }
 
 .workimg {
-  height: 100%;
+  height: 80%;
   width: 40%;
   background: url(../../../../public/deereimg.jpeg);
   background-size: cover;
@@ -38,7 +38,7 @@
 /* Display For Jobs */
 .workdisplay {
   width: 65%;
-  height: 40%;
+  height: 50%;
   margin-left: -10%;
   display: flex;
   flex-direction: column;
@@ -63,17 +63,24 @@
 /* About Display */
 .aboutdisplay {
   align-self: flex-end;
-  margin-top: 25vh;
-  margin-bottom: -70vh;
+  display: flex;
+  margin-top: 25%;
   width: 70%;
   height: 20%;
-  background: red;
 }
 
 .abouttext {
   width: 50%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: -webkit-linear-gradient(45deg, #ffd700, #ff4500, #ff1493);
 }
-
-.aboutimage {
+.abouttext p {
+  margin: 2.5%;
+}
+.aboutimg {
   width: 50%;
+  background-color: #131313;
 }

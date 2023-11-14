@@ -40,7 +40,7 @@ const Project = () => {
   };
 
   const handleClose = () => {
-    animate(`.${styles.projectsContainer}`, { height: "0vh", opacity: 1 });
+    animate(`.${styles.projectsContainer}`, { height: "0vh", opacity: 0 });
     animate(`.${styles.projectsComponent}`, { transform: "translateY(0vh)" });
   };
 

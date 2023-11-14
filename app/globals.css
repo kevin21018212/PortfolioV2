@@ -40,7 +40,7 @@
 }
 
 .line {
-  border: 1px solid white;
+  border: 1px solid #ffffff;
   margin: 0;
   margin-bottom: 10%;
 }
@@ -49,45 +49,45 @@
 .xs {
   font-family: "Petrov-Thin", sans-serif;
   font-size: 0.9rem;
-  color: white;
+  color: #ffffff;
 }
 .s {
   font-family: "Petrov-ExtraLight", sans-serif;
   font-size: 1rem;
-  color: white;
+  color: #ffffff;
 }
 .m {
   font-family: "Petrov", sans-serif;
-  font-size: 1.8rem;
-  color: white;
+  font-size: 1.6vw;
+  color: #ffffff;
 }
 .l {
   font-family: "Genesys", sans-serif;
   font-size: 2rem;
-  color: white;
+  color: #ffffff;
 }
 .t1 {
   font-family: "Genesys", sans-serif;
-  font-size: 5rem;
-  color: white;
+  font-size: 6vw;
+  color: #ffffff;
   margin: 0;
 }
 .t2 {
   font-family: "Genesys", sans-serif;
   font-size: 4rem;
-  color: white;
+  color: #ffffff;
   margin: 0;
 }
 .t3 {
   font-family: "Monument-Regular", sans-serif;
   font-size: 2.5rem;
-  color: white;
+  color: #ffffff;
   margin: 0;
 }
 .t4 {
   font-family: "Petrov", sans-serif;
   font-size: 2rem;
-  color: white;
+  color: #ffffff;
   margin: 0;
 }
 .t5 {
@@ -103,7 +103,7 @@
 p {
   font-family: "Byotone ", sans-serif;
   font-size: 1.1rem;
-  color: white;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 600px) {
