@@ -1,4 +1,3 @@
-"use client";
 import React, { useRef } from "react";
 import styles from "../css/skillslider.module.css";
 import SkillCard from "./skillcard";

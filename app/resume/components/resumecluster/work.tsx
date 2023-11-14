@@ -1,5 +1,5 @@
 import React from "react";
-import Spacer from "@/app/Global/spacer";
+
 import styles from "../../css/resumecluster/work.module.css";
 
 const ResumeWork = () => {

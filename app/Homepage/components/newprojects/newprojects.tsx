@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import { animate, motion } from "framer-motion";
 import styles from "../../css/projects/project.module.css";

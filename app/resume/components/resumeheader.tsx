@@ -1,5 +1,4 @@
 import styles from "../css/resumeheader.module.css";
-
 const ResumeHeader = () => {
   return (
     <div className={styles.headerContainer}>
