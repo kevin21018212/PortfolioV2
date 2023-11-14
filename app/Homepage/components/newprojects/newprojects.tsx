@@ -12,7 +12,7 @@ const circles = [
   { id: "circle5", info: "Information for Circle 5" },
 ];
 
-const Project = () => {
+const NewProjects = () => {
   const [selectedCircle, setSelectedCircle] = useState<string | null>(null);
   const [projectData, setProjectData] = useState<any>(null);
 
@@ -75,4 +75,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default NewProjects;

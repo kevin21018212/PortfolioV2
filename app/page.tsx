@@ -1,6 +1,7 @@
 "use client";
+
 import Landing from "./homepage/components/landing/landing";
-import Project from "./homepage/components/projects/project";
+import NewProjects from "./homepage/components/newprojects/newprojects";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
         <Landing />
       </div>
       <div className={styles.projectcontainer}>
-        <Project />
+        <NewProjects />
       </div>
     </div>
   );
