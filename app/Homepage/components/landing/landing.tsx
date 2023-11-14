@@ -1,7 +1,10 @@
+
+"use client";
 import React, { useEffect, useState } from "react";
 import styles from "../../css/landing/landing.module.css";
 import LandingText from "./landingtext";
 import LandingCluster from "./landingcluster";
+
 
 const Landing = () => {
   const [amplitude, setAmplitude] = useState(0);
