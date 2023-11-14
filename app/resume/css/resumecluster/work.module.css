@@ -13,27 +13,67 @@
   display: flex;
   flex-direction: column-reverse;
 }
+
 .worktext {
   height: 8%;
-  background-color: whitesmoke;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   padding-left: 5%;
 }
+
 .worktext p {
-  color: black;
+  color: #131313;
 }
 
+/* Non-image */
 .workbox {
   height: 100%;
-  width: 70%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
+/* Display For Jobs */
 .workdisplay {
-  width: 60%;
+  width: 65%;
   height: 40%;
   margin-left: -10%;
-  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  background-color: #131313;
+  justify-content: center;
+}
+
+.jobtext p {
+  padding: 0;
+  padding-left: 5%;
+  color: #828282;
+}
+
+.jobtext p:nth-child(2) {
+  padding-left: 10%;
+}
+
+.jobtext p:nth-child(3) {
+  padding-left: 15%;
+}
+
+/* About Display */
+.aboutdisplay {
+  align-self: flex-end;
+  margin-top: 25vh;
+  margin-bottom: -70vh;
+  width: 70%;
+  height: 20%;
+  background: red;
+}
+
+.abouttext {
+  width: 50%;
+}
+
+.aboutimage {
+  width: 50%;
 }

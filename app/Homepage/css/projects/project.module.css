@@ -10,7 +10,6 @@
   height: 0vh;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
   background-color: #0a0a0a;
-  border: 1px dotted red;
 }
 
 /* Circle and Circle Container */
@@ -43,7 +42,7 @@
 /* New Projects Spacer */
 .spacerContainer {
   height: 100%;
-  background-color: whitesmoke;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   padding-left: 2.5%;
@@ -58,14 +57,13 @@
   width: 100%;
 }
 
-/* Toggle Button */
 .toggleButton {
   background: transparent;
   border: none;
   cursor: pointer;
   position: relative;
-  width: 20%; /* Full width */
-  height: 100%; /* Full height */
+  width: 20%;
+  height: 100%;
   transition: transform 0.5s;
 }
 
