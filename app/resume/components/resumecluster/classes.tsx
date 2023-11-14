@@ -1,4 +1,4 @@
-import Spacer from "@/app/Global/spacer";
+import Spacer from "@/app/global/spacer";
 import styles from "../../css/resumecluster/classes.module.css";
 const ResumeClasses = () => {
   return (
