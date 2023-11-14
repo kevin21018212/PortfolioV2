@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
-import "../../css/projects/projectinfo.css";
+import styles from "../../css/projects/projectinfo.module.css";
 
-// Define a type for project data
 type ProjectData = {
   id: string;
   topRight: string;
@@ -15,11 +14,11 @@ type ProjectData = {
 const textanimation = {
   inactive: {
     opacity: 0,
-    translateX: "-5vh", // Change to -5vh for left, 5vh for middle
+    translateX: "-5vh",
   },
   active: {
     opacity: 1,
-    translateX: "0vh", // Change to 0vh for left, 5vh for middle
+    translateX: "0vh",
   },
 };
 
@@ -27,7 +26,7 @@ const staggerChildrenAnimation = {
   active: {
     transition: {
       delayChildren: 0.5,
-      staggerChildren: 0.2, // Adjust the stagger delay as needed.
+      staggerChildren: 0.2,
     },
   },
 };
@@ -44,7 +43,7 @@ const ProjectInfo = ({ projectData }: { projectData: ProjectData }) => {
   }, [projectData]);
 
   return (
-    <div className="projects-content">
+    <div className={styles.projectsContent}>
       {projectData && (
         <>
           <motion.div
@@ -52,15 +51,21 @@ const ProjectInfo = ({ projectData }: { projectData: ProjectData }) => {
             initial="inactive"
             animate={animationState}
             exit="inactive"
-            className="projects-content-left"
+            className={styles.projectsContentLeft}
           >
-            <motion.p className={"s"} variants={textanimation}>
+            <motion.p className="s" variants={textanimation}>
               {projectData.topRight}
             </motion.p>
-            <motion.div className={`middleleft t1`} variants={textanimation}>
+            <motion.div
+              className={`${styles.middleLeft} `}
+              variants={textanimation}
+            >
               {projectData.middleRight}
             </motion.div>
-            <motion.p className={"bottom m"} variants={textanimation}>
+            <motion.p
+              className={`${styles.bottom} "m"`}
+              variants={textanimation}
+            >
               {projectData.bottomRight}
             </motion.p>
           </motion.div>
@@ -69,19 +74,22 @@ const ProjectInfo = ({ projectData }: { projectData: ProjectData }) => {
             initial="inactive"
             animate={animationState}
             exit="inactive"
-            className="projects-content-middle"
+            className={styles.projectsContentMiddle}
           >
-            <motion.div className=" idea" variants={textanimation}>
-              <motion.p className="t3 ideatop">IDEA</motion.p>
-              <motion.p className="s ideabody">
+            <motion.div className={styles.idea} variants={textanimation}>
+              <motion.p className="t3">IDEA</motion.p>
+              <motion.p className={`"s" ${styles.ideabody}`}>
                 {projectData.middleMiddle}
               </motion.p>
             </motion.div>
-            <motion.p className={"bottommiddle m"} variants={textanimation}>
+            <motion.p
+              className={`${styles.bottomMiddle} "m"`}
+              variants={textanimation}
+            >
               {projectData.bottomMiddle}
             </motion.p>
           </motion.div>
-          <div className="projects-content-right"></div>
+          <div className={styles.projectsContentRight}></div>
         </>
       )}
     </div>

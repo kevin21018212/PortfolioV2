@@ -1,23 +1,25 @@
 import "./globals.css";
-import type {Metadata} from "next";
-import {Inter} from "next/font/google";
-import NavBar from "./Homepage/components/navbar";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import NavBar from "./Global/navbar";
 
-const inter = Inter({subsets: ["latin"]});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Porfolio",
   description: "my work presented",
 };
 
-
-
-export default function RootLayout({children}: {children: React.ReactNode}) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body className={inter.className}>
-      <NavBar />
-      {children}
+        <NavBar />
+        {children}
       </body>
     </html>
   );

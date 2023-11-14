@@ -1,30 +1,32 @@
-.projects-component {
+/* Projects Component */
+.projectsComponent {
   z-index: 50;
   height: 10vh;
 }
 
-.projects-container {
+/* Projects Info Container */
+.projectsContainer {
   display: flex;
   height: 0vh;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
   background-color: #0a0a0a;
 }
 
-/*This is the circles section*/
-.circles-container {
+/* Circle and Circle Container */
+.circlesContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 8%;
+  width: 10%;
   background: linear-gradient(to bottom, #fd2000, #df007c);
   box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.2);
   overflow-y: hidden;
 }
 
 .circle {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: transparent;
   border: 2px solid #0a0a0a;
@@ -37,36 +39,36 @@
   background-color: #0a0a0a;
 }
 
-.spacer-container {
+/* New Projects Spacer */
+.spacerContainer {
   height: 100%;
-  background-color: whitesmoke;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   padding-left: 2.5%;
+}
+
+.spacerContainer p {
+  color: black;
 }
 
 .t1 {
   padding-top: 1%;
   width: 100%;
 }
-.spacer-container p {
-  color: black;
-}
 
-/* Styles for the button container */
-.toggle-button {
+.toggleButton {
   background: transparent;
   border: none;
   cursor: pointer;
   position: relative;
-  width: 20%; /* Full width */
-  height: 100%; /* Full height */
+  width: 20%;
+  height: 100%;
   transition: transform 0.5s;
 }
 
-/* Common styles for both up and down arrow */
-.toggle-button::before,
-.toggle-button::after {
+.toggleButton::before,
+.toggleButton::after {
   content: "";
   position: absolute;
   width: 0;
@@ -75,18 +77,14 @@
   transition: transform 0.5s;
 }
 
-/* Styles for the up arrow */
-.toggle-button.up-arrow::before {
-  border-bottom-color: #000; /* Change color as needed */
-  top: 50%; /* Center vertically */
-
-  transform: translate(-50%, -50%) rotate(180deg); /* Center and rotate the arrow to face up */
+.toggleButton.upArrow::before {
+  border-bottom-color: #000;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
 }
 
-/* Styles for the down arrow */
-.toggle-button.down-arrow::before {
-  border-bottom-color: #000; /* Change color as needed */
-  top: 50%; /* Center vertically */
-
-  transform: translate(-50%, -50%) rotate(0deg); /* Center and keep arrow facing down */
+.toggleButton.downArrow::before {
+  border-bottom-color: #000;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
 }
