@@ -1,9 +1,11 @@
-import Spacer from "@/app/global/spacer";
 import styles from "../../css/resumecluster/classes.module.css";
+import ClassesCard from "./classescard";
 const ResumeClasses = () => {
   return (
     <div className={styles.classescontainer}>
-      <div></div>
+      <ClassesCard />
+      <ClassesCard />
+      <ClassesCard />
     </div>
   );
 };

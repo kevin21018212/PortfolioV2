@@ -1,6 +1,7 @@
 "use client";
-import ResumeCluster from "./components/resumecluster";
-import ResumeHeader from "./components/resumeheader";
+
+import ResumeCluster from "./components/cluster";
+import ResumeHeader from "./components/header";
 import SkillSlider from "./components/skillslider";
 import "./resume.css";
 

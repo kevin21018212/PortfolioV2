@@ -50,6 +50,7 @@
 
 .spacerContainer p {
   color: black;
+  width: 80%;
 }
 
 .t1 {
@@ -73,7 +74,7 @@
   position: absolute;
   width: 0;
   height: 0;
-  border: 15px solid transparent;
+  border: 20px solid transparent;
   transition: transform 0.5s;
 }
 

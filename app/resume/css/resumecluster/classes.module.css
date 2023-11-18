@@ -1,4 +1,6 @@
 .classescontainer {
   height: 100vh;
   background: whitesmoke;
+  display: flex;
+  justify-content: center;
 }

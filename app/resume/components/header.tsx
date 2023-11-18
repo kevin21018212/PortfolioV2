@@ -1,4 +1,4 @@
-import styles from "../css/resumeheader.module.css";
+import styles from "../css/header.module.css";
 
 const ResumeHeader = () => {
   return (
