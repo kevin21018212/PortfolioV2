@@ -1,5 +1,3 @@
-import React from "react";
-import Spacer from "@/app/global/spacer";
 import styles from "../../css/resumecluster/work.module.css";
 import AboutDisplay from "./about";
 

@@ -1,5 +1,4 @@
-"use-client";
-
+"use client";
 const ProjectsPage = () => {
   return <div className="projectsContainer"></div>;
 };

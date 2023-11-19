@@ -3,7 +3,6 @@ const courseCategories = [
     name: "Core Software Engineering Courses",
     description: "Courses related to the fundamentals of software engineering.",
     courses: [
-      "S E 101 - Software Engineering Orientation",
       "S E 185 - Problem Solving for Software Engineering",
       "S E 166 - Software Engineering Careers",
       "S E 186X - Group projects in software engineering",

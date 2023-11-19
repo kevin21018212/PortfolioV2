@@ -1,5 +1,4 @@
-"use-client";
-
+"use client";
 const ContactPage = () => {
   return <div className="contactContainer"></div>;
 };

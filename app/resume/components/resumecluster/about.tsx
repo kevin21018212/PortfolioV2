@@ -1,5 +1,6 @@
+"use client";
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "../../css/resumecluster/about.module.css";
 
 interface AboutDisplayProps {}
