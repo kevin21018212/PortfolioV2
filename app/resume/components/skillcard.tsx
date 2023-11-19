@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+"use client";
+import { useState } from "react";
+import { useAnimation, motion } from "framer-motion";
 import styles from "../css/skillcard.module.css";
-import { motion, useAnimation } from "framer-motion";
 
 interface SkillCardProps {
   title: string;

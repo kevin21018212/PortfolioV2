@@ -1,8 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { projects } from "@/app/data/projectdata";
 import { animate, motion } from "framer-motion";
+import { useState } from "react";
 import styles from "../../css/projects/project.module.css";
-import { projects } from "@/app/projectdata";
 import ProjectInfo from "./projectinfo";
 
 const circles = [

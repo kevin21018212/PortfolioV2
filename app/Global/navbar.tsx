@@ -1,6 +1,5 @@
-import React from "react";
-import "./navbar.css";
 import Link from "next/link";
+import "./navbar.css";
 
 const NavBar = () => {
   return (
