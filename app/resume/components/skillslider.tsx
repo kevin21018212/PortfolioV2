@@ -1,13 +1,13 @@
 "use client";
-import React, { useRef } from "react";
+import { useMotionValue, motion } from "framer-motion";
+import { useRef } from "react";
 import styles from "../css/skillslider.module.css";
+import skillsData from "@/app/data/skilldata";
 import SkillCard from "./skillcard";
-import skillsData from "@/app/skilldata";
-import { motion, useMotionValue } from "framer-motion";
 
 const SkillSlider = () => {
   const numSkills = skillsData.length;
-  const initialX = -(numSkills / 2) * 25; // Center the carousel
+  const initialX = -(numSkills / 2) * 25;
   const x = useMotionValue(initialX);
 
   const ref = useRef(null);

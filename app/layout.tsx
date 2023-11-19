@@ -1,13 +1,13 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import NavBar from "./Global/navbar";
+import NavBar from "./global/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Porfolio",
-  description: "my work presented",
+  description: "my work presented wtf",
 };
 
 export default function RootLayout({

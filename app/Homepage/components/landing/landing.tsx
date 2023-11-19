@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "../../css/landing/landing.module.css";
 import LandingCluster from "./landingcluster";
 import LandingText from "./landingtext";

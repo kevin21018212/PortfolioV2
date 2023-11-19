@@ -1,5 +1,3 @@
-"use client";
-
 import Landing from "./homepage/components/landing/landing";
 import NewProjects from "./homepage/components/newprojects/newprojects";
 import styles from "./page.module.css";
