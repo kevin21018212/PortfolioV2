@@ -2,8 +2,8 @@
 import React, { useRef } from "react";
 import styles from "../css/skillslider.module.css";
 import SkillCard from "./skillcard";
-import skillsData from "@/app/skilldata";
 import { motion, useMotionValue } from "framer-motion";
+import skillsData from "@/app/data/skilldata";
 
 const SkillSlider = () => {
   const numSkills = skillsData.length;

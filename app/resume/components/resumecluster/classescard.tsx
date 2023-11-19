@@ -2,9 +2,17 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "../../css/resumecluster/classescard.module.css";
 
-const ClassesCard = () => {
+interface ClassesCardProps {
+  category: {
+    name: string;
+    description: string;
+    courses: string[];
+  };
+}
+
+const ClassesCard: React.FC<ClassesCardProps> = ({ category }) => {
   const descriptionVariants = {
-    hidden: { height: "20%" },
+    hidden: { height: "10%" },
     visible: { height: "80%" },
   };
 
@@ -16,8 +24,13 @@ const ClassesCard = () => {
         initial="hidden"
         whileHover="visible"
       >
-        <p>Description</p>
-        <p>Extra Information</p>
+        <p className="t5">{category.name}</p>
+
+        {category.courses.map((course, index) => (
+          <p className="s" key={index}>
+            {course}
+          </p>
+        ))}
       </motion.div>
     </motion.div>
   );

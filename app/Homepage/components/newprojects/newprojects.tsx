@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { animate, motion } from "framer-motion";
 import styles from "../../css/projects/project.module.css";
-import { projects } from "@/app/projectdata";
+import { projects } from "@/app/data/projectdata";
 import ProjectInfo from "./projectinfo";
 
 const circles = [

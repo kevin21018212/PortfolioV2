@@ -1,6 +1,24 @@
 .classescontainer {
   height: 100vh;
   background: whitesmoke;
+  position: relative;
+}
+
+.classestitle {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.classestitle p {
+  color: black;
+  font-family: "Monument-Regular", sans-serif;
+  font-size: 10vw;
+}
+
+.cardcontainer {
+  height: 50%;
   display: flex;
   justify-content: center;
 }
