@@ -1,6 +1,7 @@
 import React from "react";
 import Spacer from "@/app/global/spacer";
 import styles from "../../css/resumecluster/work.module.css";
+import AboutDisplay from "./about";
 
 const ResumeWork = () => {
   return (
@@ -37,14 +38,7 @@ const ResumeWork = () => {
             </div>
           </div>
           <div className={styles.aboutdisplay}>
-            <div className={styles.abouttext}>
-              <p className="t4">Extra</p>
-              <p>Outdoor Rec</p>
-              <p>Traveling</p>
-              <p>Fashion</p>
-              <p>Art</p>
-            </div>
-            <div className={styles.aboutimg}></div>
+            <AboutDisplay />
           </div>
         </div>
       </div>
