@@ -26,7 +26,6 @@ const LandingText = () => {
             sequence={["Developer", 3000, "Programmer", 3000, "Designer", 3000]}
             speed={10}
             repeat={Infinity}
-            color="linear-gradient(45deg, #ffd700, #ff4500, #ff1493)"
           />
         </div>
       </motion.div>
